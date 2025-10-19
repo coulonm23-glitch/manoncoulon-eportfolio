@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>E-Portfolio – Manon Coulon</title>
+  <meta name="description" content="E-portfolio de Manon Coulon : accueil, CV, engagement civique et mobilité.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- PDF.js (CDN) for client-side PDF text extraction -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.7.76/pdf.min.js" defer></script>
+  <!-- Favicon PNG -->
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- Optionnel pour compatibilité avec tous les navigateurs -->
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  
+  <style>
+  
+	
+	/* ===== Frise chronologique avec dates à gauche ===== */
+	.timeline-left-date {
+	  position: relative;
+	  margin: 2rem 0;
+	  padding-left: 5px; /* espace pour la date */
+	}
+
+	.timeline-left-date::before {
+	  content: '';
+	  position: absolute;
+	  top: 0;
+	  left: 50px; /* ligne verticale */
+	  width: 3px;
+	  height: 100%;
+	  background: #ccc;
+	}
+
+	.timeline-block {
+	  position: relative;
+	  margin-bottom: 2rem;
+	}
+
+	.timeline-date {
+	  position: absolute;
+	  left: 0;
+	  width: 100px;
+	  text-align: right;
+	  font-weight: bold;
+	  color: #007bff;
+	}
+
+	.timeline-point {
+	  position: absolute;
+	  left: 40px;
+	  width: 16px;
+	  height: 16px;
+	  background: #007bff;
+	  border-radius: 50%;
+	  top: 0;
+	}
+
+	.timeline-content {
+	  background: #fff;
+	  border-radius: 12px;
+	  padding: 1rem 1.5rem;
+	  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+	  margin-left: 80px; /* espace après le point */
+	}
+
+	.timeline-content h3 {
+	  margin-top: 0;
+	  font-weight: 600;
+	}
+
+	.timeline-content p {
+	  margin: 0.5rem 0;
+	}
+
+	/* Responsive : dates au-dessus du contenu sur petit écran */
+	@media (max-width: 768px) {
+	  .timeline-left-date {
+		padding-left: 50px;
+	  }
+	  .timeline-date {
+		position: relative;
+		width: auto;
+		text-align: left;
+		margin-bottom: 0.5rem;
+	  }
+	  .timeline-point {
+		left: 0;
+	  }
+	  .timeline-content {
+		margin-left: 30px;
+	  }
+	}
+	
+	.site-header {
+		  position: fixed; /* fixe le header en haut */
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  z-index: 1000; /* reste au-dessus du contenu */
+		  background-color: white; /* couleur de fond du header */
+		  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* petite ombre pour le distinguer */
+		  padding: 10px 0; /* ajuster si nécessaire */
+		}
+	
+
+
+		body {
+		  padding-top: 80px; /* mettre la hauteur de ton header approximative */
+		  margin: 10;
+		  padding: 0;
+		}
+
+		/* Optionnel : pour que le header soit responsive */
+		.site-header .container {
+		  display: flex;
+		  justify-content: space-between;
+		  align-items: center;
+		  flex-wrap: nowrap;
+		  padding-left: 80px;      
+		  padding-right: 80px;     
+		  padding-top: 0;         
+		  padding-bottom: 0; 
+		  max-width: 100%;  /* empêche la limite centrale */
+		  margin: 0;
+		  width: 100vw;     /* prend toute la largeur visible */
+		  gap: 1rem
+		  }
+
+		section {
+		  scroll-margin-top: 80px; /* hauteur du header fixe */
+}
+	</style>
+	
+
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="avatar" aria-hidden="true">MC</div>
+        <div>
+          <h1 class="site-title" data-i18n="name">Manon Coulon</h1>
+          <p class="site-subtitle" data-i18n="subtitle">E‑Portfolio</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#accueil">Accueil</a>
+		<a href="#ingenierie">Cours d'ingénierie</a>
+		<a href="#mobilite">Mobilité</a>
+		<a href="#engagement">Engagement civique</a>
+		<a href="#sports">Sports & Activités</a>
+		<a href="#carriere">Développement de carrière</a>
+		<a href="#contact">Contact</a>
+      </nav>
+      <div class="toggles">
+          <button id="theme-toggle" class="btn" type="button" aria-label="Basculer thème" data-i18n-attr="aria-label:aria.themeToggle">☀/☽</button>
+        <button id="lang-toggle" class="btn" type="button" aria-label="Changer de langue" data-i18n="btn.lang">FR/EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+	<!-- 1. Accueil -->
+    <section id="accueil" class="section">
+      <div class="container grid-2">
+        <div>
+          <h2 data-i18n="sections.accueil">Accueil</h2>
+          <p>
+            <span data-i18n="accueil.intro1">Bonjour, je suis</span> <strong>Manon Coulon</strong>.
+            <span data-i18n="accueil.intro2">Sur cette page, vous trouverez une vue d’ensemble de mon parcours, mes engagements et mes expériences de mobilité. Les détails complets se trouvent dans mon CV (visionnable et téléchargeable ci‑dessous).</span>
+          </p>
+          <ul class="quick-facts">
+            <li><span class="label" data-i18n="facts.domain">Domaine</span><span class="value" id="fact-domain">Étudiante en 1ère année à l'ENSEEIHT</span></li>
+            <li><span class="label" data-i18n="facts.location">Localisation</span><span class="value" id="fact-location" style="float:right;">Toulouse (31500)</span></li>
+          </ul>
+          
+          <div class="elevator-speech">
+            <h3 data-i18n="elevator.title">Elevator Speech</h3>
+            <p class="elevator-intro" data-i18n="elevator.intro">Découvrez mes atouts professionnels et mes inspirations en quelques minutes :</p>
+            <div class="video-container">
+              <video id="elevator-video" controls preload="metadata" poster="elevator-speech-poster.jpg" data-i18n-attr="title:elevator.videoTitle">
+                <source src="elevator-speech.mp4" type="video/mp4">
+                <source src="elevator-speech.webm" type="video/webm">
+                <p data-i18n="elevator.fallback">Votre navigateur ne supporte pas la lecture vidéo. <a href="elevator-speech.mp4" data-i18n="elevator.download">Téléchargez la vidéo</a> pour la regarder.</p>
+              </video>
+            </div>
+            <p class="video-note" data-i18n="elevator.note">Durée : ~2 minutes • Format : MP4/WebM</p>
+          </div>
+          
+          <div class="cta-row">
+            <a class="btn primary" href="#cv" data-i18n="cta.viewCv">Voir mon CV</a>
+            <a class="btn" href="CV_2025-10-13_Manon_Coulon.pdf" download data-i18n="cta.download" data-url-fr="CV_2025-10-13_Manon_Coulon.pdf" data-url-en="CV_2025-10-13_Manon_Coulon_Anglais.pdf">Télécharger le CV (PDF)</a>
+          </div>
+        </div>
+        <div>
+          <div class="card highlight">
+            <h3 data-i18n="skill.title">Compétences clés</h3>
+            <div>
+				<ul class="value" id="fact-keyskills">
+				  <li data-i18n="facts.skills.list1">Qualité d'écoute</li>
+				  <li data-i18n="facts.skills.list2">Esprit d'équipe</li>
+				  <li data-i18n="facts.skills.list3">Autonomie</li>
+				  <li data-i18n="facts.skills.list4">Être organisée</li>
+				</ul>
+            </div>
+              <span data-i18n=".text">Décrire en quelques lignes votre objectif professionnel. Par exemple : « Contribuer à des projets à impact où je peux mettre en œuvre mes compétences techniques et humaines. »</span>
+            </p>
+          </div>
+		  
+		  <div class="card highlight" style="margin-top: 1rem;">
+			  <h3 data-i18n="languages.title">Langues</h3>
+			  <ul id="languages-list" class="list-plain">
+				<li data-i18n="languages.english">
+				  🇬🇧 Anglais : niveau B2
+				</li>
+				<li data-i18n="languages.spanish">
+				  🇪🇸 Espagnol : niveau B1
+				</li>
+			  </ul>
+		  </div>
+
+        </div>
+      </div>
+    </section>
+	
+  <!-- 2. Cours d'ingénierie -->
+  <section id="ingenierie" class="section alt">
+	<article class="timeline-item">
+        <div class="timeline-dot" aria-hidden="true"></div>
+        <div class="timeline-content">
+          <h3 data-i18n="engagement.item1.title">Projet scientifique – Transition énergétique (TIPE)</h3>
+          <p class="meta" data-i18n="engagement.item1.meta">Scientifique et environnemental</p>
+          <p data-i18n="engagement.item1.description">
+            Projet axé sur les énergies renouvelables et la transition écologique.<br>
+            Recherche de solutions pour améliorer le rendement et réduire les pertes énergétiques.<br>
+            Étude de l’influence de la température sur les performances des panneaux photovoltaïques et des solutions de refroidissement.
+          </p>
+        </div>
+    </article>
+	<article class="timeline-item">
+        <div class="timeline-dot" aria-hidden="true"></div>
+        <div class="timeline-content">
+          <h3 data-i18n="engagement.item2.title">Stage de 3ème (2020)</h3>
+          <p class="meta" data-i18n="engagement.item2.meta">Scientifique et environnemental</p>
+          <p data-i18n="engagement.item2.description">
+            <p>Première immersion dans le monde professionnel, découverte des métiers et de l'environnement de travail.</p>
+        </div>
+    </article>
+  </section>
+  
+  
+  <!-- 3. Mobilité -->
+	<section id="mobilite" class="section alt">
+      <div class="container grid-2">
+        <div>
+          <h2>Mobilité</h2>
+          <ul class="cards">
+            <li class="card">
+              <!-- Les langues avec drapeaux doivent être déplacées dans la section compétences clés (faites ci-dessous). Laisser cette liste vide ou la retirer ici selon le contexte. -->
+              <p>Résumé des objectifs, compétences développées et résultats.</p>
+            </li>
+            <li class="card">
+              <h3>Pays / Ville – Programme / Entreprise</h3>
+              <p class="meta">Dates</p>
+              <p>Ajoutez d’autres expériences si besoin.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+  <!-- 4. Engagement civique -->
+  <section id="engagement" class="section alt">
+    <div class="container">
+      <h2>Engagement civique</h2>
+      <p>Mes actions dans le bénévolat, le service communautaire et les projets citoyens.</p>
+      <div class="timeline-left-date">
+        <div class="timeline-block">
+          <div class="timeline-date">2018</div>
+          <div class="timeline-point"></div>
+          <div class="timeline-content">
+            <h3>Volontariat sportif – Ligue des Nations de Volley</h3>
+            <p><strong>Bénévolat sportif et événementiel</strong></p>
+			<p>Participation à un événement international (ramasseuse de balle, accueil du public).<br>
+			Esprit d’équipe, sens du service, responsabilité.<br>
+			Accueil du public et assistance logistique pendant la compétition.</p>
+		  </div>
+        </div>
+        <div class="timeline-block">
+          <div class="timeline-date">2024</div>
+          <div class="timeline-point"></div>
+          <div class="timeline-content">
+            <h3>Volontaire – Jeux Olympiques de Paris 2024</h3>
+            <p><strong>Service civique / Engagement citoyen international</strong></p>
+			<p>Accueil, orientation et accompagnement des spectateurs (français et étrangers).<br>
+			Mise en avant de qualités humaines : diplomatie, écoute, gestion du stress, adaptabilité.<br>
+			Contribution à un événement d’intérêt national et collectif.
+			Accueil et information des spectateurs, gestion de situations variées, médiation et communication interculturelle.</p>
+			<p data-i18n="engagement.item2.description">
+			</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Sports & Activités -->
+  <section id="sports" class="section alt">
+	  <div class="container">
+		<h2 data-i18n="sections.hobbies">Sports & Activités</h2>
+		<ul class="hobby-list">
+		  <li>
+			<span class="icon">🏐</span>
+			<div class="hobby-content">
+			  <strong data-i18n="hobbies.volleyball.title">Volley-ball</strong> — 
+			  <span data-i18n="hobbies.volleyball.duration">Pendant 12 ans</span>
+
+			  <p data-i18n="hobbies.volleyball.description">J'ai joué au volley-ball en club pendant 12 ans :</p>
+			  <ul>
+				<li data-i18n="hobbies.volleyball.list1">9 ans dans le club de Venelles (<strong>PAVVB</strong>, club professionnel féminin)</li>
+				<li data-i18n="hobbies.volleyball.list2">3 ans dans le club de Velaux (<strong>CVF</strong>, niveau prénational)</li>
+			  </ul>
+
+			  <p data-i18n="hobbies.volleyball.team">Je suis dans l’équipe 1 de l’AS INP et j’ai participé à de nombreuses compétitions nationales :</p>
+			  <ul>
+				<li data-i18n="hobbies.volleyball.national1">Coupes de France jeune (de M13 à M18)</li>
+				<li data-i18n="hobbies.volleyball.national2">Tournois internationaux (Hyères et Mougins, à plusieurs reprises)</li>
+			  </ul>
+
+			  <p data-i18n="hobbies.volleyball.level">J’ai finalement atteint un niveau National 3.</p>
+			</div>
+		  </li>
+
+		  <li>
+			<span class="icon">🎹</span>
+			<div class="hobby-content">
+			  <strong data-i18n="hobbies.piano.title">Piano</strong> — 
+			  <span data-i18n="hobbies.piano.duration">Pendant 5 ans</span>
+
+			  <p data-i18n="hobbies.piano.description">
+				Pratique du piano classique et moderne, participation à des concerts et reaccueils.
+			  </p>
+			</div>
+		  </li>
+
+		  <li>
+			<span class="icon">🏔️</span>
+			<div class="hobby-content">
+			  <strong data-i18n="hobbies.hiking.title">Randonnée</strong> — 
+			  <span data-i18n="hobbies.hiking.duration">Depuis plusieurs années</span>
+
+			  <p data-i18n="hobbies.hiking.description">
+				Passion pour la montagne et la découverte de nouveaux paysages, notamment les sentiers pyrénéens.
+			  </p>
+			</div>
+		  </li>
+		</ul>
+	  </div>
+	</section>
+
+  <!-- 6. Développement de carrière -->
+	<section id="carrière" class="section alt">
+		  <div class="container">
+			<h2 data-i18n="sections.cv">Développement de carrière</h2>
+			<p class="section-intro">
+			  <span data-i18n="cv.intro">Vous pouvez parcourir mon CV ci‑dessous ou le</span> <a id="cv-download-top" href="CV_2025-10-13_Manon_Coulon.pdf" download data-i18n="cv.download" data-url-fr="CV_2025-10-13_Manon_Coulon.pdf" data-url-en="CV_2025-10-13_Manon_Coulon_Anglais.pdf">télécharger</a>.
+			<div id="cv-extract-status" class="card" style="margin: 12px 0; display:none;"></div>
+			<div class="pdf-viewer">
+			  <object id="pdf-object" data="CV_2025-10-13_Manon_Coulon.pdf" type="application/pdf" aria-label="Visionneuse du CV" data-url-fr="CV_2025-10-13_Manon_Coulon.pdf" data-url-en="CV_2025-10-13_Manon_Coulon_Anglais.pdf">
+				<iframe id="pdf-iframe" src="CV_2025-10-13_Manon_Coulon.pdf" title="Visionneuse du CV" data-url-fr="CV_2025-10-13_Manon_Coulon.pdf" data-url-en="CV_2025-10-13_Manon_Coulon_Anglais.pdf"></iframe>
+			  </object>
+			</div>
+		  </div>
+	</section>
+
+  <!-- Contact -->
+	<section id="contact" class="section">
+      <div class="container">
+        <h2 data-i18n="sections.contact">Contact</h2>
+        <p><span data-i18n="contact.text">Vous pouvez me contacter par mail à l'adresse :</span> <a id="contact-email" href="mailto:coulon.m23@gmail.com">coulon.m23@gmail.com</a> <span data-i18n="contact.note">.</span></p>
+        <p><span data-i18n="contact.linkedin">Retrouvez-moi sur LinkedIn :</span> <a id="linkedin-link" href="https://www.linkedin.com/in/manon-coulon-472b63383/" target="_blank" rel="noopener noreferrer" data-url-fr="https://www.linkedin.com/in/manon-coulon-472b63383/" data-url-en="https://www.linkedin.com/in/manon-coulon-472b63383/?locale=en_US">linkedin.com/in/manon-coulon-472b63383</a></p>
+        <div class="cta-row">
+          <a id="cv-download-bottom" class="btn" href="CV_2025-10-13_Manon_Coulon.pdf" download data-i18n="cta.downloadShort" data-url-fr="CV_2025-10-13_Manon_Coulon.pdf" data-url-en="CV_2025-10-13_Manon_Coulon_Anglais.pdf">Télécharger le CV</a>
+        </div>
+      </div>
+    </section>
+  
+
+	<style>
+	/* ===== Styles hobbies avec icônes alignées ===== */
+	.hobby-list {
+	  list-style: none;
+	  padding: 0;
+	  margin: 0;
+	}
+
+	.hobby-list li {
+	  display: flex;
+	  align-items: flex-start; /* aligne l'emoji avec le texte */
+	  gap: 0.75rem; /* espace entre l'emoji et le contenu */
+	  margin-bottom: 1.5rem;
+	}
+
+	.hobby-list .icon {
+	  font-size: 2rem; /* taille de l'emoji */
+	  line-height: 1; 
+	  flex-shrink: 0;
+	}
+
+	.hobby-list .hobby-content {
+	  flex: 1;
+	}
+
+	.hobby-list .hobby-content p {
+	  margin: 0.5rem 0;
+	}
+
+	.hobby-list .hobby-content ul {
+	  margin: 0.5rem 0 0.5rem 1.25rem;
+	  padding: 0;
+	}
+	</style>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> <span data-i18n="name">Manon Coulon</span> — <span data-i18n="subtitle">E‑Portfolio</span></p>
+    </div>
+  </footer>
+
+  <script>
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+  </script>
+  <script src="theme-lang.js" defer></script>
+  <script src="cv-extract.js" defer></script>
+</body>
+</html>
