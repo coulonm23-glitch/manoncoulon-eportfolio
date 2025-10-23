@@ -150,13 +150,13 @@
         </div>
       </div>
       <nav class="nav">
-        <a href="#accueil">Accueil</a>
-		<a href="#ingenierie">Cours d'ingénierie</a>
-		<a href="#mobilite">Mobilité</a>
-		<a href="#engagement">Engagement civique</a>
-		<a href="#sports">Sports & Activités</a>
-		<a href="#carriere">Développement de carrière</a>
-		<a href="#contact">Contact</a>
+        <a href="#accueil" data-i18n="btn.accueil">Accueil</a>
+		<a href="#ingenierie" data-i18n="btn.ingenierie">Cours d'ingénierie</a>
+		<a href="#mobilite" data-i18n="btn.mob">Mobilité</a>
+		<a href="#engagement" data-i18n="btn.civique">Engagement civique</a>
+		<a href="#sports" data-i18n="btn.sport">Sports & Activités</a>
+		<a href="#carrière" data-i18n="btn.dev">Développement de carrière</a>
+		<a href="#contact"data-i18n="btn.contact">Contact</a>
       </nav>
       <div class="toggles">
           <button id="theme-toggle" class="btn" type="button" aria-label="Basculer thème" data-i18n-attr="aria-label:aria.themeToggle">☀/☽</button>
@@ -166,208 +166,340 @@
   </header>
 
   <main>
-	<!-- 1. Accueil -->
-    <section id="accueil" class="section">
-      <div class="container grid-2">
-        <div>
-          <h2 data-i18n="sections.accueil">Accueil</h2>
-          <p>
-            <span data-i18n="accueil.intro1">Bonjour, je suis</span> <strong>Manon Coulon</strong>.
-            <span data-i18n="accueil.intro2">Sur cette page, vous trouverez une vue d’ensemble de mon parcours, mes engagements et mes expériences de mobilité. Les détails complets se trouvent dans mon CV (visionnable et téléchargeable ci‑dessous).</span>
-          </p>
-          <ul class="quick-facts">
-            <li><span class="label" data-i18n="facts.domain">Domaine</span><span class="value" id="fact-domain">Étudiante en 1ère année à l'ENSEEIHT</span></li>
-            <li><span class="label" data-i18n="facts.location">Localisation</span><span class="value" id="fact-location" style="float:right;">Toulouse (31500)</span></li>
-          </ul>
-          
-          <div class="elevator-speech">
-            <h3 data-i18n="elevator.title">Elevator Speech</h3>
-            <p class="elevator-intro" data-i18n="elevator.intro">Découvrez mes atouts professionnels et mes inspirations en quelques minutes :</p>
-            <div class="video-container">
-              <video id="elevator-video" controls preload="metadata" poster="elevator-speech-poster.jpg" data-i18n-attr="title:elevator.videoTitle">
-                <source src="elevator-speech.mp4" type="video/mp4">
-                <source src="elevator-speech.webm" type="video/webm">
-                <p data-i18n="elevator.fallback">Votre navigateur ne supporte pas la lecture vidéo. <a href="elevator-speech.mp4" data-i18n="elevator.download">Téléchargez la vidéo</a> pour la regarder.</p>
-              </video>
-            </div>
-            <p class="video-note" data-i18n="elevator.note">Durée : ~2 minutes • Format : MP4/WebM</p>
-          </div>
-          
-          <div class="cta-row">
-            <a class="btn primary" href="#cv" data-i18n="cta.viewCv">Voir mon CV</a>
-            <a class="btn" href="CV_2025-10-13_Manon_Coulon.pdf" download data-i18n="cta.download" data-url-fr="CV_2025-10-13_Manon_Coulon.pdf" data-url-en="CV_2025-10-13_Manon_Coulon_Anglais.pdf">Télécharger le CV (PDF)</a>
-          </div>
-        </div>
-        <div>
-          <div class="card highlight">
-            <h3 data-i18n="skill.title">Compétences clés</h3>
-            <div>
+	<!-- 1. Accueil --> 
+	<section id="accueil" class="section">
+	  <div class="container" style="display: flex; gap: 20px; flex-wrap: wrap;">
+
+		<!-- Bloc droit : Texte de présentation + quick facts -->
+		<div style="flex: 1; min-width:300px; display:flex; flex-direction:column; gap:20px;">
+
+		  <!-- Bloc Présentation : fond clair, inclut la photo -->
+		  <div style="display:flex; gap:20px; flex-wrap: wrap; align-items:flex-start;">
+			
+			<!-- Photo à gauche dans le bloc Présentation -->
+			<div style="flex: 0 0 200px;">
+			  <img src="Manon_ID-GF-3.jpg" alt="Manon Coulon" style="width:100%; border-radius:10px;">
+			</div>
+
+			<!-- Texte à droite de la photo -->
+			<div style="flex: 1; min-width:200px;">
+			  <h2 data-i18n="sections.accueil">Accueil</h2>
+			  <p>
+				<span data-i18n="accueil.intro1">Bonjour, je suis</span> <strong>Manon Coulon</strong>.
+				<span data-i18n="accueil.intro2">J'ai 20 ans et je suis actuellement étudiant en première année d'ingénierie à l'ENSEEIHT à Toulouse, avec une spécialisation en électronique, énergie électrique et automatisation(3EA). J'ai toujours été passionné par la manière dont les systèmes intelligents et les technologies renouvelables peuvent fonctionner ensemble pour façonner un monde plus durable et plus connecté.</span>
+			  </p>
+			  <ul class="quick-facts">
+				<li>
+				  <span class="label" data-i18n="facts.domain">Domaine</span>
+				  <span class="value" id="fact-domain">
+					<img src="N7.png" alt="ENSEEIHT" style="height:40px; vertical-align:middle; margin-left:5px;">
+					<span data-i18n="facts1.domain">Étudiante en 1ère année à l'ENSEEIHT</span>
+				  </span>
+				</li>
+				<li>
+				  <span class="label" data-i18n="facts.location">Localisation</span>
+				  <span class="value" id="fact-location" style="float:right;">Toulouse (31500)</span>
+				</li>
+			  </ul>
+			</div>
+		  </div>
+
+		  <!-- Bloc Elevator Speech + Compétences/Langues : fond différent -->
+		  <div style="display: flex; gap: 20px; flex-wrap: wrap; padding:20px; border-radius:10px;">
+
+			<!-- Bloc vidéo : 3/4 -->
+			<div style="flex: 3; min-width:300px;">
+			  <div class="elevator-speech">
+				<h3 data-i18n="elevator.title">Elevator Speech</h3>
+				<p class="elevator-intro" data-i18n="elevator.intro">
+				  Découvrez mes atouts professionnels et mes inspirations en quelques minutes :
+				</p>
+				<div class="video-container" style="width:100%;">
+				  <video id="elevator-video" controls preload="metadata" poster="elevator-speech-poster.jpg"
+						 style="width:100%; height:auto; border-radius:10px;">
+					<source src="Manon-COULON-elevator-speech2.mp4" type="video/mp4">
+				  </video>
+				</div>
+				<p class="video-note" data-i18n="elevator.note">Durée : ~3 minutes • Format : MP4</p>
+			  </div>
+			</div>
+
+			<!-- Bloc Compétences et Langues : 1/4 -->
+			<div style="flex: 1; min-width:200px; display:flex; flex-direction:column; gap:1rem; margin-top:20px;">
+			  <div class="card highlight">
+				<h3 data-i18n="facts.skills">Compétences clés</h3>
 				<ul class="value" id="fact-keyskills">
 				  <li data-i18n="facts.skills.list1">Qualité d'écoute</li>
 				  <li data-i18n="facts.skills.list2">Esprit d'équipe</li>
 				  <li data-i18n="facts.skills.list3">Autonomie</li>
 				  <li data-i18n="facts.skills.list4">Être organisée</li>
 				</ul>
-            </div>
-              <span data-i18n=".text">Décrire en quelques lignes votre objectif professionnel. Par exemple : « Contribuer à des projets à impact où je peux mettre en œuvre mes compétences techniques et humaines. »</span>
-            </p>
-          </div>
-		  
-		  <div class="card highlight" style="margin-top: 1rem;">
-			  <h3 data-i18n="languages.title">Langues</h3>
-			  <ul id="languages-list" class="list-plain">
-				<li data-i18n="languages.english">
-				  🇬🇧 Anglais : niveau B2
-				</li>
-				<li data-i18n="languages.spanish">
-				  🇪🇸 Espagnol : niveau B1
-				</li>
-			  </ul>
+			  </div>
+
+			  <div class="card highlight">
+				<h3 data-i18n="languages.title">Langues</h3>
+				<ul id="languages-list" class="list-plain">
+				  <li data-i18n="languages.english">🇬🇧 Anglais : niveau B2</li>
+				  <li data-i18n="languages.spanish">🇪🇸 Espagnol : niveau B1</li>
+				</ul>
+			  </div>
+			</div>
+
 		  </div>
 
-        </div>
-      </div>
-    </section>
-	
-  <!-- 2. Cours d'ingénierie -->
-  <section id="ingenierie" class="section alt">
-	<article class="timeline-item">
-        <div class="timeline-dot" aria-hidden="true"></div>
-        <div class="timeline-content">
-          <h3 data-i18n="engagement.item1.title">Projet scientifique – Transition énergétique (TIPE)</h3>
-          <p class="meta" data-i18n="engagement.item1.meta">Scientifique et environnemental</p>
-          <p data-i18n="engagement.item1.description">
-            Projet axé sur les énergies renouvelables et la transition écologique.<br>
-            Recherche de solutions pour améliorer le rendement et réduire les pertes énergétiques.<br>
-            Étude de l’influence de la température sur les performances des panneaux photovoltaïques et des solutions de refroidissement.
-          </p>
-        </div>
-    </article>
-	<article class="timeline-item">
-        <div class="timeline-dot" aria-hidden="true"></div>
-        <div class="timeline-content">
-          <h3 data-i18n="engagement.item2.title">Stage de 3ème (2020)</h3>
-          <p class="meta" data-i18n="engagement.item2.meta">Scientifique et environnemental</p>
-          <p data-i18n="engagement.item2.description">
-            <p>Première immersion dans le monde professionnel, découverte des métiers et de l'environnement de travail.</p>
-        </div>
-    </article>
-  </section>
-  
-  
-  <!-- 3. Mobilité -->
-	<section id="mobilite" class="section alt">
-      <div class="container grid-2">
-        <div>
-          <h2>Mobilité</h2>
-          <ul class="cards">
-            <li class="card">
-              <!-- Les langues avec drapeaux doivent être déplacées dans la section compétences clés (faites ci-dessous). Laisser cette liste vide ou la retirer ici selon le contexte. -->
-              <p>Résumé des objectifs, compétences développées et résultats.</p>
-            </li>
-            <li class="card">
-              <h3>Pays / Ville – Programme / Entreprise</h3>
-              <p class="meta">Dates</p>
-              <p>Ajoutez d’autres expériences si besoin.</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-
-  <!-- 4. Engagement civique -->
-  <section id="engagement" class="section alt">
-    <div class="container">
-      <h2>Engagement civique</h2>
-      <p>Mes actions dans le bénévolat, le service communautaire et les projets citoyens.</p>
-      <div class="timeline-left-date">
-        <div class="timeline-block">
-          <div class="timeline-date">2018</div>
-          <div class="timeline-point"></div>
-          <div class="timeline-content">
-            <h3>Volontariat sportif – Ligue des Nations de Volley</h3>
-            <p><strong>Bénévolat sportif et événementiel</strong></p>
-			<p>Participation à un événement international (ramasseuse de balle, accueil du public).<br>
-			Esprit d’équipe, sens du service, responsabilité.<br>
-			Accueil du public et assistance logistique pendant la compétition.</p>
-		  </div>
-        </div>
-        <div class="timeline-block">
-          <div class="timeline-date">2024</div>
-          <div class="timeline-point"></div>
-          <div class="timeline-content">
-            <h3>Volontaire – Jeux Olympiques de Paris 2024</h3>
-            <p><strong>Service civique / Engagement citoyen international</strong></p>
-			<p>Accueil, orientation et accompagnement des spectateurs (français et étrangers).<br>
-			Mise en avant de qualités humaines : diplomatie, écoute, gestion du stress, adaptabilité.<br>
-			Contribution à un événement d’intérêt national et collectif.
-			Accueil et information des spectateurs, gestion de situations variées, médiation et communication interculturelle.</p>
-			<p data-i18n="engagement.item2.description">
-			</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5. Sports & Activités -->
-  <section id="sports" class="section alt">
-	  <div class="container">
-		<h2 data-i18n="sections.hobbies">Sports & Activités</h2>
-		<ul class="hobby-list">
-		  <li>
-			<span class="icon">🏐</span>
-			<div class="hobby-content">
-			  <strong data-i18n="hobbies.volleyball.title">Volley-ball</strong> — 
-			  <span data-i18n="hobbies.volleyball.duration">Pendant 12 ans</span>
-
-			  <p data-i18n="hobbies.volleyball.description">J'ai joué au volley-ball en club pendant 12 ans :</p>
-			  <ul>
-				<li data-i18n="hobbies.volleyball.list1">9 ans dans le club de Venelles (<strong>PAVVB</strong>, club professionnel féminin)</li>
-				<li data-i18n="hobbies.volleyball.list2">3 ans dans le club de Velaux (<strong>CVF</strong>, niveau prénational)</li>
-			  </ul>
-
-			  <p data-i18n="hobbies.volleyball.team">Je suis dans l’équipe 1 de l’AS INP et j’ai participé à de nombreuses compétitions nationales :</p>
-			  <ul>
-				<li data-i18n="hobbies.volleyball.national1">Coupes de France jeune (de M13 à M18)</li>
-				<li data-i18n="hobbies.volleyball.national2">Tournois internationaux (Hyères et Mougins, à plusieurs reprises)</li>
-			  </ul>
-
-			  <p data-i18n="hobbies.volleyball.level">J’ai finalement atteint un niveau National 3.</p>
-			</div>
-		  </li>
-
-		  <li>
-			<span class="icon">🎹</span>
-			<div class="hobby-content">
-			  <strong data-i18n="hobbies.piano.title">Piano</strong> — 
-			  <span data-i18n="hobbies.piano.duration">Pendant 5 ans</span>
-
-			  <p data-i18n="hobbies.piano.description">
-				Pratique du piano classique et moderne, participation à des concerts et reaccueils.
-			  </p>
-			</div>
-		  </li>
-
-		  <li>
-			<span class="icon">🏔️</span>
-			<div class="hobby-content">
-			  <strong data-i18n="hobbies.hiking.title">Randonnée</strong> — 
-			  <span data-i18n="hobbies.hiking.duration">Depuis plusieurs années</span>
-
-			  <p data-i18n="hobbies.hiking.description">
-				Passion pour la montagne et la découverte de nouveaux paysages, notamment les sentiers pyrénéens.
-			  </p>
-			</div>
-		  </li>
-		</ul>
+		</div>
 	  </div>
 	</section>
+
+
+
+
+	<!-- 2. Cours d'ingénierie -->
+	<section id="ingenierie" class="section alt">
+	  <div class="container">
+		<h2 data-i18n="btn.ingenierie">Cours d'ingénierie</h2>
+
+		<div class="ingenierie-grid" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: space-between;">
+		  
+		  <!-- Bloc 1 -->
+		  <div class="ingenierie-card" style="flex: 1; min-width: 300px; max-width: 48%;">
+			<div class="card highlight">
+				<div class="photos" style="display: flex; gap: 10px; margin-bottom: 10px;">
+				  <img src="panneau8.jpg" alt="Photo 1" style="width: 50%; height: auto; border-radius: 8px;">
+				  <img src="moii.jpg" alt="Photo 2" style="width: 50%; height: auto; border-radius: 8px;">
+				</div>
+			  <h3 data-i18n="ingenierie.item1.title">Projet scientifique – Transition énergétique (TIPE)</h3>
+			  <p data-i18n="ingenierie.item1.description">
+				Projet axé sur les énergies renouvelables et la transition écologique.<br>
+				Recherche de solutions pour améliorer le rendement et réduire les pertes énergétiques.<br>
+				Étude de l’influence de la température sur les performances des panneaux photovoltaïques et des solutions de refroidissement.<br>
+				Etude de l'influence néfaste de la température sur les performances des panneaux photovoltaïques<br>
+				Mesures expérimentales <br>
+				Interprétation, comparaison et validation de résultats expérimentaux par rapport aux modèles théoriques
+			  </p>
+			</div>
+		  </div>
+
+
+		  <!-- Bloc 2 -->
+		  <div class="ingenierie-card" style="flex: 1; min-width: 300px; max-width: 48%;">
+			<div class="card highlight">
+			  <img src="atos.png" alt="Stage de 3ème 2020" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px;">
+			  <h3 data-i18n='exp.stage3.title'>Stage de 3ème (2020)</h3>
+			  <p data-i18n="exp.stage3.description">
+				Première immersion dans le monde professionnel, découverte des métiers et de l'environnement de travail.Découverte du fonctionnement global d’une entreprise technologique et de la gestion de projet industriel.<br>
+				Observation de plusieurs métiers : ingénierie, contrôle qualité, méthodes, production et logistique. <br>
+				Initiation aux outils professionnels : logiciel SAP, CAO (Pro-Engineer), instruments de mesure et de test.<br>
+				Développement de qualités d’écoute, de rigueur, de curiosité et d’adaptation en milieu professionnel.
+			  </p>
+			</div>
+		  </div>
+
+		</div>
+	  </div>
+	</section>
+
+  
+	<!-- 3. Mobilité --> 
+	<section id="mobilite" class="section alt">
+	  <div class="container">
+		<h2 data-i18n="mobilite.title">Mobilité</h2>
+		<h3 data-i18n="mobilite.subtitle">Projets futurs</h3> <!-- Sous-titre ajouté -->
+
+		<!-- Première destination -->
+		<div class="mobility-item">
+		  <img src="pays-nordique.jpg" alt="Pays d'Europe du Nord" width="25%" style="float:left; margin-right:20px;">
+		  <div class="mobility-text">
+			<h3 data-i18n="mobilite.destination1.title">Pays d'Europe du Nord (Danemark, la Suède, la Norvège ou les Pays-Bas)</h3>
+			<p data-i18n="mobilite.destination1.description">
+			  Pour découvrir une approche concrète et avancée des réseaux d’énergie intelligents dans des pays leaders en matière de durabilité.
+			</p>
+		  </div>
+		  <div style="clear:both;"></div>
+		</div>
+
+		<hr>
+
+		<!-- Deuxième destination -->
+		<div class="mobility-item reverse">
+		  <img src="canada.jpg" alt="Canada" width="25%" style="float:left; margin-right:20px;">
+		  <div class="mobility-text">
+			<h3 data-i18n="mobilite.destination2.title">Canada</h3>
+			<p data-i18n="mobilite.destination2.description">
+			  Pour approfondir les compétences techniques et scientifiques en IA et systèmes embarqués dans un environnement de recherche réputé et stimulant. Notamment Montréal, Toronto ou Vancouver, qui sont reconnus internationalement pour leurs recherches en intelligence artificielle et en technologies embarquées.
+			</p>
+		  </div>
+		  <div style="clear:both;"></div>
+		</div>
+	  </div>
+	</section>
+
+
+
+	<!-- 4. Engagement civique -->
+	<section id="engagement" class="section alt">
+	  <div class="container">
+		<h2 data-i18n="btn.civique">Engagement civique</h2>
+		<p data-i18n='engagement.intro'>Mes actions dans le bénévolat, l'événementiel, le service communautaire et les projets citoyens.</p>
+
+		<div class="engagement-grid" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: space-between; align-items: stretch;">
+		  
+		  <!-- Bloc 1 -->
+		  <div class="engagement-card" style="flex: 0 0 49%;">
+			<div class="card highlight" style="height: 100%;">
+			  <img src="VNL.avif" alt="Volontariat sportif" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px;">
+			  <h3 data-i18n="engagement1.title">Volontariat sportif – Ligue des Nations de Volley</h3>
+			  <p data-i18n='engagement1.description'>Participation à un événement international (ramasseuse de balle, accueil du public).<br>
+			  Esprit d’équipe, sens du service, responsabilité.<br>
+			  Accueil du public et assistance logistique pendant la compétition.</p>
+			</div>
+		  </div>
+
+		  <!-- Bloc 2 -->
+		  <div class="engagement-card" style="flex: 0 0 49%;">
+			<div class="card highlight" style="height: 100%;">
+			  <div class="photos" style="display: flex; gap: 10px; margin-bottom: 10px;">
+				<img src="JO_2024.png" alt="Photo 1" style="width: 50%; height: auto; border-radius: 8px;">
+				<img src="JO.jpg" alt="Photo 2" style="width: 50%; height: auto; border-radius: 8px;">
+			  </div>
+			  <h3 data-i18n="engagement2.title">Volontaire – Jeux Olympiques de Paris 2024</h3>
+			  <p data-i18n='engagement2.description'>Accueil, orientation et accompagnement des spectateurs (français et étrangers).<br>
+			  Mise en avant de qualités humaines : diplomatie, écoute, gestion du stress, adaptabilité.<br>
+			  Contribution à un événement d’intérêt national et collectif. <br>
+			  Accueil et information des spectateurs, gestion de situations variées, médiation et communication interculturelle.</p>
+			</div>
+		  </div>
+
+		</div>
+	  </div>
+	</section>
+
+
+<!-- 5. Sports & Activités -->
+<section id="sports" class="section alt">
+  <div class="container">
+    <h2 data-i18n="sections.hobbies">Sports & Activités</h2>
+    <ul class="hobby-list">
+
+
+	<!-- Volley-ball avec 2 photos -->
+	<li style="margin-bottom: 30px;">
+	  <div style="display: flex; align-items: flex-start; gap: 20px; flex-wrap: nowrap;">
+
+		<!-- Bloc photos (1/3 de la largeur) -->
+		<div class="photos" 
+			 style="flex: 0 0 33%; display: flex; flex-direction: row; justify-content: space-between; gap: 8px; box-sizing: border-box;">
+		  <img src="volley1.jpg" alt="Photo 1" style="width: 48%; height: auto; border-radius: 8px; object-fit: cover;">
+		  <img src="volley2.jpg" alt="Photo 2" style="width: 48%; height: auto; border-radius: 8px; object-fit: cover;">
+		</div>
+
+		<!-- Bloc texte (2/3 de la largeur) -->
+		<div class="hobby-content" 
+			 style="flex: 1; line-height: 1.6; box-sizing: border-box;">
+
+		  <strong data-i18n="hobbies.volleyball.title">Volley-ball</strong> — 
+		  <span data-i18n="hobbies.volleyball.duration">Pendant 12 ans</span>
+
+		  <p data-i18n="hobbies.volleyball.description">
+			J'ai joué au volley-ball en club pendant 12 ans :
+		  </p>
+
+		  <ul style="margin-top: 4px; margin-bottom: 4px; padding-left: 20px; list-style-type: disc; line-height: 1;">
+			  <li style="margin-bottom: 2px; margin-left: 5px;" data-i18n="hobbies.volleyball.list1">
+				9 ans dans le club de Venelles (<strong>PAVVB</strong>, club professionnel féminin)
+			  </li>
+			  <li style="margin-bottom: 2px; margin-left: 5px;" data-i18n="hobbies.volleyball.list2">
+				3 ans dans le club de Velaux (<strong>CVF</strong>, niveau prénational)
+			  </li>
+			</ul>
+
+
+		  <p data-i18n="hobbies.volleyball.team">
+			Je suis dans l’équipe 1 de l’AS INP et j’ai participé à de nombreuses compétitions nationales :
+		  </p>
+
+		  <ul style="margin-top: 0px; margin-bottom: 5px; padding-left: 20px; list-style-type: disc; line-height: 1;">
+			<li style="margin-bottom: 2px; margin-left: 5px;" data-i18n="hobbies.volleyball.national1">
+			  Coupes de France jeune (de M13 à M18)
+			</li>
+			<li style="margin-bottom: 2px; margin-left: 5px;"      nnndata-i18n="hobbies.volleyball.national2">
+			  Tournois internationaux (Hyères et Mougins, à plusieurs reprises)
+			</li>
+		  </ul>
+
+		  <p data-i18n="hobbies.volleyball.level">
+			J’ai finalement atteint un niveau National 3.
+		  </p>
+		</div>
+
+	  </div>
+	</li>
+
+
+	<!-- Piano avec une seule photo -->
+	<li style="margin-bottom: 30px;">
+	  <div style="display: flex; align-items: center; gap: 20px; flex-wrap: nowrap;">
+
+		<!-- Bloc photo (1/3 de la largeur) -->
+		<div class="photos" 
+			 style="flex: 0 0 33%; display: flex; justify-content: center; align-items: center;">
+		  <img src="piano.jpg" alt="Piano" 
+			   style="width: 90%; height: auto; border-radius: 8px; object-fit: cover;">
+		</div>
+
+		<!-- Bloc texte (2/3 de la largeur) -->
+		<div class="hobby-content" 
+			 style="flex: 1; line-height: 1.4; box-sizing: border-box;">
+		  <strong data-i18n="hobbies.piano.title">Piano</strong> — 
+		  <span data-i18n="hobbies.piano.duration">Pendant 5 ans</span>
+		  <p data-i18n="hobbies.piano.description">
+			Pratique du piano classique et moderne, participation à des concerts et recueils.
+		  </p>
+		</div>
+
+	  </div>
+	</li>
+
+	<!-- Randonnée -->
+	<li style="margin-bottom: 30px;">
+	  <div style="display: flex; align-items: center; gap: 20px; flex-wrap: nowrap;">
+
+		<!-- Bloc photos (1/3 de la largeur) -->
+		<div class="photos"
+			 style="flex: 0 0 33%; display: flex; flex-direction: column; gap: 10px; box-sizing: border-box; justify-content: center;">
+
+		  <div style="display: flex; justify-content: space-between; gap: 8px;">
+			<img src="montagne1.jpg" alt="Photo 1" style="width: 48%; height: auto; border-radius: 8px; object-fit: cover;">
+			<img src="montagne3.jpg" alt="Photo 2" style="width: 48%; height: auto; border-radius: 8px; object-fit: cover;">
+		  </div>
+		</div>
+
+		<!-- Bloc texte (2/3 de la largeur) -->
+		<div class="hobby-content"
+			 style="flex: 1; line-height: 1.4; box-sizing: border-box;">
+		  <strong data-i18n="hobbies.hiking.title">Randonnée</strong> — 
+		  <span data-i18n="hobbies.hiking.duration">Depuis plusieurs années</span>
+		  <p data-i18n="hobbies.hiking.description">
+			Passion pour la montagne et la découverte de nouveaux paysages, notamment les sentiers pyrénéens.
+		  </p>
+		</div>
+
+	  </div>
+	</li>
+
+
+    </ul>
+  </div>
+</section>
+
+
+
+
 
   <!-- 6. Développement de carrière -->
 	<section id="carrière" class="section alt">
 		  <div class="container">
-			<h2 data-i18n="sections.cv">Développement de carrière</h2>
+			<h2 data-i18n="btn.dev">Développement de carrière</h2>
 			<p class="section-intro">
 			  <span data-i18n="cv.intro">Vous pouvez parcourir mon CV ci‑dessous ou le</span> <a id="cv-download-top" href="CV_2025-10-13_Manon_Coulon.pdf" download data-i18n="cv.download" data-url-fr="CV_2025-10-13_Manon_Coulon.pdf" data-url-en="CV_2025-10-13_Manon_Coulon_Anglais.pdf">télécharger</a>.
 			<div id="cv-extract-status" class="card" style="margin: 12px 0; display:none;"></div>
@@ -379,18 +511,47 @@
 		  </div>
 	</section>
 
-  <!-- Contact -->
+
+	<!-- Contact -->
 	<section id="contact" class="section">
-      <div class="container">
-        <h2 data-i18n="sections.contact">Contact</h2>
-        <p><span data-i18n="contact.text">Vous pouvez me contacter par mail à l'adresse :</span> <a id="contact-email" href="mailto:coulon.m23@gmail.com">coulon.m23@gmail.com</a> <span data-i18n="contact.note">.</span></p>
-        <p><span data-i18n="contact.linkedin">Retrouvez-moi sur LinkedIn :</span> <a id="linkedin-link" href="https://www.linkedin.com/in/manon-coulon-472b63383/" target="_blank" rel="noopener noreferrer" data-url-fr="https://www.linkedin.com/in/manon-coulon-472b63383/" data-url-en="https://www.linkedin.com/in/manon-coulon-472b63383/?locale=en_US">linkedin.com/in/manon-coulon-472b63383</a></p>
-        <div class="cta-row">
-          <a id="cv-download-bottom" class="btn" href="CV_2025-10-13_Manon_Coulon.pdf" download data-i18n="cta.downloadShort" data-url-fr="CV_2025-10-13_Manon_Coulon.pdf" data-url-en="CV_2025-10-13_Manon_Coulon_Anglais.pdf">Télécharger le CV</a>
-        </div>
-      </div>
-    </section>
-  
+	  <div class="container">
+		<h2 data-i18n="btn.contact">Contact</h2>
+		
+		<p>
+		  <span data-i18n="contact.text">Vous pouvez me contacter par mail à l'adresse :</span> 
+		  <a id="contact-email" href="mailto:coulon.m23@gmail.com">coulon.m23@gmail.com</a> 
+		  <span data-i18n="contact.note">.</span>
+		</p>
+
+		<p>
+		  <span data-i18n="contact.linkedin">Retrouvez-moi sur LinkedIn :</span> 
+		  <a id="linkedin-link" href="https://www.linkedin.com/in/manon-coulon-472b63383/" target="_blank" rel="noopener noreferrer" 
+			 data-url-fr="https://www.linkedin.com/in/manon-coulon-472b63383/" 
+			 data-url-en="https://www.linkedin.com/in/manon-coulon-472b63383/?locale=en_US">
+			 linkedin.com/in/manon-coulon-472b63383
+		  </a>
+		</p>
+
+		<div class="cta-row">
+		  <a id="cv-download-bottom" class="btn" href="CV_2025-10-13_Manon_Coulon.pdf" download 
+			 data-i18n="cta.downloadShort" 
+			 data-url-fr="CV_2025-10-13_Manon_Coulon.pdf" 
+			 data-url-en="CV_2025-10-13_Manon_Coulon_Anglais.pdf">
+			 Télécharger le CV
+		  </a>
+		</div>
+
+		<p style="margin-top:20px; text-align:justify;">
+			<span data-i18n="futur.description1">En effet, l'ingénierie ne concerne pas seulement la science et la technologie, mais aussi les personnes, le progrès et les objectifs. En apprenant auprès de professionnels inspirants et en travaillant sur des projets internationaux, j'espère contribuer à un avenir</span>
+		</p>
+		<p style="text-align:center; font-weight:bold; font-style:italic; font-size:1.3em; margin:10px 0;">
+		  <span data-i18n="futur.description2">plus propre, plus intelligent et plus connecté.</span>
+</p>
+
+
+	  </div>
+	</section>
+
 
 	<style>
 	/* ===== Styles hobbies avec icônes alignées ===== */
@@ -420,11 +581,34 @@
 	.hobby-list .hobby-content p {
 	  margin: 0.5rem 0;
 	}
+	}
 
 	.hobby-list .hobby-content ul {
 	  margin: 0.5rem 0 0.5rem 1.25rem;
 	  padding: 0;
 	}
+	
+	/* ===== Puces visibles et interlignes contrôlés pour les listes à l'intérieur des hobbies ===== */
+	.hobby-list .hobby-content ul {
+	  list-style-type: disc;          /* puces pleines */
+	  list-style-position: outside;   /* puce à l'extérieur du bloc texte */
+	  padding-left: 1.25rem;          /* espace à gauche pour voir la puce */
+	  margin-top: 0.25rem;
+	  margin-bottom: 0.5rem;
+	  line-height: 1.15;              /* interligne à l'intérieur d'un item */
+	}
+
+	/* forcer un comportement list-item si une règle globale a modifié display */
+	.hobby-list .hobby-content ul li {
+	  display: list-item;
+	  margin-bottom: 0.35rem;         /* espace entre les points */
+	}
+	
+	p {
+      text-align: justify;
+    }
+
+
 	</style>
   </main>
 
