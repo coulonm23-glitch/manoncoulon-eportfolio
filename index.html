@@ -18,85 +18,7 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   
   <style>
-  
-	
-	/* ===== Frise chronologique avec dates à gauche ===== */
-	.timeline-left-date {
-	  position: relative;
-	  margin: 2rem 0;
-	  padding-left: 5px; /* espace pour la date */
-	}
 
-	.timeline-left-date::before {
-	  content: '';
-	  position: absolute;
-	  top: 0;
-	  left: 50px; /* ligne verticale */
-	  width: 3px;
-	  height: 100%;
-	  background: #ccc;
-	}
-
-	.timeline-block {
-	  position: relative;
-	  margin-bottom: 2rem;
-	}
-
-	.timeline-date {
-	  position: absolute;
-	  left: 0;
-	  width: 100px;
-	  text-align: right;
-	  font-weight: bold;
-	  color: #007bff;
-	}
-
-	.timeline-point {
-	  position: absolute;
-	  left: 40px;
-	  width: 16px;
-	  height: 16px;
-	  background: #007bff;
-	  border-radius: 50%;
-	  top: 0;
-	}
-
-	.timeline-content {
-	  background: #fff;
-	  border-radius: 12px;
-	  padding: 1rem 1.5rem;
-	  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-	  margin-left: 80px; /* espace après le point */
-	}
-
-	.timeline-content h3 {
-	  margin-top: 0;
-	  font-weight: 600;
-	}
-
-	.timeline-content p {
-	  margin: 0.5rem 0;
-	}
-
-	/* Responsive : dates au-dessus du contenu sur petit écran */
-	@media (max-width: 768px) {
-	  .timeline-left-date {
-		padding-left: 50px;
-	  }
-	  .timeline-date {
-		position: relative;
-		width: auto;
-		text-align: left;
-		margin-bottom: 0.5rem;
-	  }
-	  .timeline-point {
-		left: 0;
-	  }
-	  .timeline-content {
-		margin-left: 30px;
-	  }
-	}
-	
 	.site-header {
 		  position: fixed; /* fixe le header en haut */
 		  top: 0;
@@ -186,7 +108,7 @@
 			  <h2 data-i18n="sections.accueil">Accueil</h2>
 			  <p>
 				<span data-i18n="accueil.intro1">Bonjour, je suis</span> <strong>Manon Coulon</strong>.
-				<span data-i18n="accueil.intro2">J'ai 20 ans et je suis actuellement étudiant en première année d'ingénierie à l'ENSEEIHT à Toulouse, avec une spécialisation en électronique, énergie électrique et automatisation(3EA). J'ai toujours été passionné par la manière dont les systèmes intelligents et les technologies renouvelables peuvent fonctionner ensemble pour façonner un monde plus durable et plus connecté.</span>
+				<span data-i18n="accueil.intro2">J'ai 20 ans et je suis actuellement étudiant en première année d'ingénierie à l'<strong>ENSEEIHT</strong> à Toulouse, avec une spécialisation en électronique, énergie électrique et automatisation(3EA). J'ai toujours été passionné par la manière dont les systèmes intelligents et les technologies renouvelables peuvent fonctionner ensemble pour façonner un monde plus durable et plus connecté.</span>
 			  </p>
 			  <ul class="quick-facts">
 				<li>
@@ -270,12 +192,9 @@
 				</div>
 			  <h3 data-i18n="ingenierie.item1.title">Projet scientifique – Transition énergétique (TIPE)</h3>
 			  <p data-i18n="ingenierie.item1.description">
-				Projet axé sur les énergies renouvelables et la transition écologique.<br>
-				Recherche de solutions pour améliorer le rendement et réduire les pertes énergétiques.<br>
-				Étude de l’influence de la température sur les performances des panneaux photovoltaïques et des solutions de refroidissement.<br>
-				Etude de l'influence néfaste de la température sur les performances des panneaux photovoltaïques<br>
-				Mesures expérimentales <br>
-				Interprétation, comparaison et validation de résultats expérimentaux par rapport aux modèles théoriques
+				Dans le cadre de mon TIPE, projet axé sur les <strong>énergies renouvelables</strong> et la <strong>transition écologique</strong>, j’ai étudié l’influence néfaste de la température sur les performances des panneaux photovoltaïques et recherché des solutions pour <strong>améliorer leur rendement et réduire les pertes énergétiques</strong>. <br>
+				Après une analyse théorique du comportement des cellules solaires face à la chaleur, j’ai mené des <strong>mesures expérimentales</strong> afin de quantifier ces effets et de tester plusieurs méthodes de refroidissement, actives et passives. J’ai ensuite <strong>interprété, comparé et validé</strong> mes résultats expérimentaux par rapport aux modèles théoriques, ce qui m’a permis de mieux comprendre les compromis entre performance énergétique, contraintes environnementales et faisabilité technique.
+
 			  </p>
 			</div>
 		  </div>
@@ -287,10 +206,8 @@
 			  <img src="atos.png" alt="Stage de 3ème 2020" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px;">
 			  <h3 data-i18n='exp.stage3.title'>Stage de 3ème (2020)</h3>
 			  <p data-i18n="exp.stage3.description">
-				Première immersion dans le monde professionnel, découverte des métiers et de l'environnement de travail.Découverte du fonctionnement global d’une entreprise technologique et de la gestion de projet industriel.<br>
-				Observation de plusieurs métiers : ingénierie, contrôle qualité, méthodes, production et logistique. <br>
-				Initiation aux outils professionnels : logiciel SAP, CAO (Pro-Engineer), instruments de mesure et de test.<br>
-				Développement de qualités d’écoute, de rigueur, de curiosité et d’adaptation en milieu professionnel.
+				Lors de cette première immersion dans le monde professionnel, j’ai découvert les différents métiers et l’environnement de travail au sein d’une entreprise technologique. J’ai pu observer plusieurs domaines d’activité tels que l’ingénierie, le <strong>contrôle qualité</strong>, les <strong>méthodes</strong>, la <strong>production</strong> et la <strong>logistique</strong>. J’ai également été initiée à divers outils professionnels, notamment le logiciel SAP, la conception assistée par ordinateur (Pro-Engineer). <br>
+				Cette expérience m’a aidé à développer des qualités essentielles en milieu professionnel comme <strong>l’écoute, la rigueur, la curiosité et la capacité d’adaptation.</strong>
 			  </p>
 			</div>
 		  </div>
@@ -312,7 +229,7 @@
 		  <div class="mobility-text">
 			<h3 data-i18n="mobilite.destination1.title">Pays d'Europe du Nord (Danemark, la Suède, la Norvège ou les Pays-Bas)</h3>
 			<p data-i18n="mobilite.destination1.description">
-			  Pour découvrir une approche concrète et avancée des réseaux d’énergie intelligents dans des pays leaders en matière de durabilité.
+			  Pour découvrir une approche concrète et avancée des <strong>réseaux d’énergie intelligents</strong> dans des pays leaders en matière de durabilité.
 			</p>
 		  </div>
 		  <div style="clear:both;"></div>
@@ -326,7 +243,7 @@
 		  <div class="mobility-text">
 			<h3 data-i18n="mobilite.destination2.title">Canada</h3>
 			<p data-i18n="mobilite.destination2.description">
-			  Pour approfondir les compétences techniques et scientifiques en IA et systèmes embarqués dans un environnement de recherche réputé et stimulant. Notamment Montréal, Toronto ou Vancouver, qui sont reconnus internationalement pour leurs recherches en intelligence artificielle et en technologies embarquées.
+			  Pour approfondir les compétences techniques et scientifiques en <strong>IA</strong> et <strong>systèmes embarqués</strong> dans un environnement de recherche réputé et stimulant. Notamment Montréal, Toronto ou Vancouver, qui sont reconnus internationalement pour leurs recherches en intelligence artificielle et en technologies embarquées.
 			</p>
 		  </div>
 		  <div style="clear:both;"></div>
@@ -342,31 +259,52 @@
 		<h2 data-i18n="btn.civique">Engagement civique</h2>
 		<p data-i18n='engagement.intro'>Mes actions dans le bénévolat, l'événementiel, le service communautaire et les projets citoyens.</p>
 
-		<div class="engagement-grid" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: space-between; align-items: stretch;">
-		  
+		<div class="engagement-grid" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; align-items: stretch;">
+
 		  <!-- Bloc 1 -->
-		  <div class="engagement-card" style="flex: 0 0 49%;">
+		  <div class="engagement-card" style="flex: 0 0 30%; min-width: 280px;">
 			<div class="card highlight" style="height: 100%;">
 			  <img src="VNL.avif" alt="Volontariat sportif" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px;">
 			  <h3 data-i18n="engagement1.title">Volontariat sportif – Ligue des Nations de Volley</h3>
-			  <p data-i18n='engagement1.description'>Participation à un événement international (ramasseuse de balle, accueil du public).<br>
-			  Esprit d’équipe, sens du service, responsabilité.<br>
-			  Accueil du public et assistance logistique pendant la compétition.</p>
+			  <ul style="list-style-type: disc; padding-left: 20px; margin: 0;">
+				<li style="margin-bottom: 6px;" data-i18n="engagement1.description1">Participation à un événement international (ramasseuse de balle, accueil du public).</li>
+				<li style="margin-bottom: 6px;" data-i18n="engagement1.description2">Esprit d’équipe, sens du service, responsabilité.</li>
+				<li style="margin-bottom: 6px;"data-i18n="engagement1.description3">Accueil du public et assistance logistique pendant la compétition.</li>
+			  </ul>
 			</div>
 		  </div>
 
 		  <!-- Bloc 2 -->
-		  <div class="engagement-card" style="flex: 0 0 49%;">
+		  <div class="engagement-card" style="flex: 0 0 30%; min-width: 280px;">
 			<div class="card highlight" style="height: 100%;">
 			  <div class="photos" style="display: flex; gap: 10px; margin-bottom: 10px;">
 				<img src="JO_2024.png" alt="Photo 1" style="width: 50%; height: auto; border-radius: 8px;">
 				<img src="JO.jpg" alt="Photo 2" style="width: 50%; height: auto; border-radius: 8px;">
 			  </div>
 			  <h3 data-i18n="engagement2.title">Volontaire – Jeux Olympiques de Paris 2024</h3>
-			  <p data-i18n='engagement2.description'>Accueil, orientation et accompagnement des spectateurs (français et étrangers).<br>
-			  Mise en avant de qualités humaines : diplomatie, écoute, gestion du stress, adaptabilité.<br>
-			  Contribution à un événement d’intérêt national et collectif. <br>
-			  Accueil et information des spectateurs, gestion de situations variées, médiation et communication interculturelle.</p>
+			  <ul style="list-style-type: disc; padding-left: 20px; margin: 0;">
+				<li style="margin-bottom: 6px;" data-i18n="engagement2.description1">Accueil, orientation et accompagnement des spectateurs (français et étrangers).</li>
+				<li style="margin-bottom: 6px;" data-i18n="engagement2.description2">Mise en avant de qualités humaines : diplomatie, écoute, gestion du stress, adaptabilité.</li>
+				<li style="margin-bottom: 6px;"data-i18n="engagement2.description3">Contribution à un événement d’intérêt national et collectif.</li>
+			  </ul>
+			</div>
+		  </div>
+
+		  <!-- Bloc 3 -->
+		  <div class="engagement-card" style="flex: 0 0 30%; min-width: 280px;">
+			<div class="card highlight" style="height: 100%;">
+			  <img src="human7.jpeg" alt="Projet solidaire au Chili" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px;">
+
+			  <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+				<img src="chili.jpg" alt="Drapeau du Chili" style="width: 32px; height: 22px; border-radius: 4px;">
+				<h3 data-i18n="engagement3.title" style="margin: 0;">Projet solidaire – Voyage humanitaire au Chili (été 2026)</h3>
+			  </div>
+
+			  <ul style="list-style-type: disc; padding-left: 20px; margin: 0;">
+				<li style="margin-bottom: 6px;" data-i18n="engagement3.description1">Projet de voyage solidaire avec le club <strong>Human7</strong> visant à <strong>aider, tutorer et sensibiliser des enfants</strong> dans des écoles ou des orphelinats au Chili.</li>
+				<li style="margin-bottom: 6px;" data-i18n="engagement3.description2">Objectifs : favoriser l’accès à l’éducation, encourager l’ouverture culturelle et renforcer les valeurs de solidarité internationale.</li>
+				<li style="margin-bottom: 6px;" data-i18n="engagement3.description3">Une expérience humaine et éducative centrée sur l’échange et l’entraide.</li>
+			  </ul>
 			</div>
 		  </div>
 
@@ -375,12 +313,13 @@
 	</section>
 
 
+
+
 <!-- 5. Sports & Activités -->
 <section id="sports" class="section alt">
   <div class="container">
     <h2 data-i18n="sections.hobbies">Sports & Activités</h2>
     <ul class="hobby-list">
-
 
 	<!-- Volley-ball avec 2 photos -->
 	<li style="margin-bottom: 30px;">
@@ -397,38 +336,37 @@
 		<div class="hobby-content" 
 			 style="flex: 1; line-height: 1.6; box-sizing: border-box;">
 
-		  <strong data-i18n="hobbies.volleyball.title">Volley-ball</strong> — 
-		  <span data-i18n="hobbies.volleyball.duration">Pendant 12 ans</span>
-
-		  <p data-i18n="hobbies.volleyball.description">
-			J'ai joué au volley-ball en club pendant 12 ans :
+		  <strong data-i18n="hobbies.volleyball.title">Volley-ball</strong>
+		  
+		  <!-- Phrase avant la liste -->
+		  <p data-i18n="hobbies.volleyball.description" style="margin: 0 0 2px 0;">
+			J'ai joué au volley-ball en club pendant <strong>12 ans</strong> :
 		  </p>
 
-		  <ul style="margin-top: 4px; margin-bottom: 4px; padding-left: 20px; list-style-type: disc; line-height: 1;">
-			  <li style="margin-bottom: 2px; margin-left: 5px;" data-i18n="hobbies.volleyball.list1">
-				9 ans dans le club de Venelles (<strong>PAVVB</strong>, club professionnel féminin)
-			  </li>
-			  <li style="margin-bottom: 2px; margin-left: 5px;" data-i18n="hobbies.volleyball.list2">
-				3 ans dans le club de Velaux (<strong>CVF</strong>, niveau prénational)
-			  </li>
-			</ul>
+		  <ul style="padding-left: 20px; list-style-type: disc; line-height: 1; margin: 0 0 10px 0;">
+			<li style="margin-bottom: 2px; margin-left: 5px;" data-i18n="hobbies.volleyball.list1">
+			  9 ans dans le club de Venelles (<strong>PAVVB</strong>, club professionnel féminin)
+			</li>
+			<li style="margin-bottom: 4px; margin-left: 5px;" data-i18n="hobbies.volleyball.list2">
+			  3 ans dans le club de Velaux (<strong>CVF</strong>, niveau prénational)
+			</li>
+		  </ul>
 
-
-		  <p data-i18n="hobbies.volleyball.team">
-			Je suis dans l’équipe 1 de l’AS INP et j’ai participé à de nombreuses compétitions nationales :
+		  <p data-i18n="hobbies.volleyball.team" style="margin: 0 0 2px 0;">
+			J’ai participé à de nombreuses compétitions nationales :
 		  </p>
 
-		  <ul style="margin-top: 0px; margin-bottom: 5px; padding-left: 20px; list-style-type: disc; line-height: 1;">
+		  <ul style="padding-left: 20px; list-style-type: disc; line-height: 1; margin: 0 0 10px 0;">
 			<li style="margin-bottom: 2px; margin-left: 5px;" data-i18n="hobbies.volleyball.national1">
 			  Coupes de France jeune (de M13 à M18)
 			</li>
-			<li style="margin-bottom: 2px; margin-left: 5px;"      nnndata-i18n="hobbies.volleyball.national2">
+			<li style="margin-bottom: 2px; margin-left: 5px;" data-i18n="hobbies.volleyball.national2">
 			  Tournois internationaux (Hyères et Mougins, à plusieurs reprises)
 			</li>
 		  </ul>
 
-		  <p data-i18n="hobbies.volleyball.level">
-			J’ai finalement atteint un niveau National 3.
+		  <p data-i18n="hobbies.volleyball.level" style="margin: 0;">
+			J’ai finalement atteint un niveau <strong>National 3</strong> et je fais maintenant partie de l'équipe 1 de l'<strong>AS INP</strong>.
 		  </p>
 		</div>
 
@@ -450,10 +388,9 @@
 		<!-- Bloc texte (2/3 de la largeur) -->
 		<div class="hobby-content" 
 			 style="flex: 1; line-height: 1.4; box-sizing: border-box;">
-		  <strong data-i18n="hobbies.piano.title">Piano</strong> — 
-		  <span data-i18n="hobbies.piano.duration">Pendant 5 ans</span>
+		  <strong data-i18n="hobbies.piano.title">Piano</strong>
 		  <p data-i18n="hobbies.piano.description">
-			Pratique du piano classique et moderne, participation à des concerts et recueils.
+			J'ai joué du piano pendant <strong>5ans</strong> ainsi qu'un peu de solvège. J'ai notamment participer à des représentations.
 		  </p>
 		</div>
 
@@ -475,14 +412,14 @@
 		</div>
 
 		<!-- Bloc texte (2/3 de la largeur) -->
-		<div class="hobby-content"
-			 style="flex: 1; line-height: 1.4; box-sizing: border-box;">
-		  <strong data-i18n="hobbies.hiking.title">Randonnée</strong> — 
-		  <span data-i18n="hobbies.hiking.duration">Depuis plusieurs années</span>
-		  <p data-i18n="hobbies.hiking.description">
-			Passion pour la montagne et la découverte de nouveaux paysages, notamment les sentiers pyrénéens.
-		  </p>
+		<div class="hobby-content" style="flex: 1; line-height: 1.4; box-sizing: border-box;">
+		  <strong data-i18n="hobbies.hiking.title">Randonnée</strong>
+		  <ul style="list-style-type: disc; padding-left: 20px; margin: 5px 0 0 0;">
+			<li data-i18n="hobbies.hiking.description1">Passion pour la <strong>montagne</strong> et la découverte de nouveaux paysages, notamment les sentiers des Alpes.</li>
+			<li data-i18n="hobbies.hiking.description2">Projet <strong>GR20</strong> en Corse</li>
+		  </ul>
 		</div>
+
 
 	  </div>
 	</li>
@@ -554,55 +491,6 @@
 
 
 	<style>
-	/* ===== Styles hobbies avec icônes alignées ===== */
-	.hobby-list {
-	  list-style: none;
-	  padding: 0;
-	  margin: 0;
-	}
-
-	.hobby-list li {
-	  display: flex;
-	  align-items: flex-start; /* aligne l'emoji avec le texte */
-	  gap: 0.75rem; /* espace entre l'emoji et le contenu */
-	  margin-bottom: 1.5rem;
-	}
-
-	.hobby-list .icon {
-	  font-size: 2rem; /* taille de l'emoji */
-	  line-height: 1; 
-	  flex-shrink: 0;
-	}
-
-	.hobby-list .hobby-content {
-	  flex: 1;
-	}
-
-	.hobby-list .hobby-content p {
-	  margin: 0.5rem 0;
-	}
-	}
-
-	.hobby-list .hobby-content ul {
-	  margin: 0.5rem 0 0.5rem 1.25rem;
-	  padding: 0;
-	}
-	
-	/* ===== Puces visibles et interlignes contrôlés pour les listes à l'intérieur des hobbies ===== */
-	.hobby-list .hobby-content ul {
-	  list-style-type: disc;          /* puces pleines */
-	  list-style-position: outside;   /* puce à l'extérieur du bloc texte */
-	  padding-left: 1.25rem;          /* espace à gauche pour voir la puce */
-	  margin-top: 0.25rem;
-	  margin-bottom: 0.5rem;
-	  line-height: 1.15;              /* interligne à l'intérieur d'un item */
-	}
-
-	/* forcer un comportement list-item si une règle globale a modifié display */
-	.hobby-list .hobby-content ul li {
-	  display: list-item;
-	  margin-bottom: 0.35rem;         /* espace entre les points */
-	}
 	
 	p {
       text-align: justify;
