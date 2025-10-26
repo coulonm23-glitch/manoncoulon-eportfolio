@@ -108,7 +108,7 @@
 			  <h2 data-i18n="sections.accueil">Accueil</h2>
 			  <p>
 				<span data-i18n="accueil.intro1">Bonjour, je suis</span> <strong>Manon Coulon</strong>.
-				<span data-i18n="accueil.intro2">J'ai 20 ans et je suis actuellement étudiant en première année d'ingénierie à l'<strong>ENSEEIHT</strong> à Toulouse, avec une spécialisation en électronique, énergie électrique et automatisation(3EA). J'ai toujours été passionné par la manière dont les systèmes intelligents et les technologies renouvelables peuvent fonctionner ensemble pour façonner un monde plus durable et plus connecté.</span>
+				<span data-i18n="accueil.intro2">Agée de 20 ans et je suis actuellement étudiant en première année d'ingénierie à l'<strong>ENSEEIHT</strong> à Toulouse, avec une spécialisation en électronique, énergie électrique et automatisation(3EA). J'ai toujours été passionné par la manière dont les systèmes intelligents et les technologies renouvelables peuvent fonctionner ensemble pour façonner un monde plus durable et plus connecté.</span>
 			  </p>
 			  <ul class="quick-facts">
 				<li>
@@ -160,6 +160,7 @@
 				  <li data-i18n="facts.skills.list2">Esprit d'équipe</li>
 				  <li data-i18n="facts.skills.list3">Autonomie</li>
 				  <li data-i18n="facts.skills.list4">Être organisée</li>
+				  <li data-i18n="facts.skills.list5">Travail d'équipe</li>
 				</ul>
 			  </div>
 
@@ -179,44 +180,65 @@
 	</section>
 
 
-
-
 	<!-- 2. Cours d'ingénierie -->
 	<section id="ingenierie" class="section alt">
 	  <div class="container">
 		<h2 data-i18n="btn.ingenierie">Cours d'ingénierie</h2>
 
-		<div class="ingenierie-grid" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: space-between;">
+		<div class="ingenierie-grid" style="display: block; gap: 20px;">
 		  
 		  <!-- Bloc 1 -->
-		  <div class="ingenierie-card" style="flex: 1; min-width: 300px; max-width: 48%;">
+		  <div class="ingenierie-card" style="width: 100%; margin-bottom: 20px;">
 			<div class="card highlight">
-				<div class="photos" style="display: flex; gap: 10px; margin-bottom: 10px;">
-				  <img src="panneau8.jpg" alt="Photo 1" style="width: 50%; height: auto; border-radius: 8px;">
-				  <img src="moii.jpg" alt="Photo 2" style="width: 50%; height: auto; border-radius: 8px;">
-				</div>
-			  <h3 data-i18n="ingenierie.item1.title">Projet scientifique – Transition énergétique (TIPE)</h3>
-			  <p data-i18n="ingenierie.item1.description">
-				Dans le cadre de mon TIPE, projet axé sur les <strong>énergies renouvelables</strong> et la <strong>transition écologique</strong>, j’ai étudié l’influence néfaste de la température sur les performances des panneaux photovoltaïques et recherché des solutions pour <strong>améliorer leur rendement et réduire les pertes énergétiques</strong>. <br>
-				Après une analyse théorique du comportement des cellules solaires face à la chaleur, j’ai mené des <strong>mesures expérimentales</strong> afin de quantifier ces effets et de tester plusieurs méthodes de refroidissement, actives et passives. J’ai ensuite <strong>interprété, comparé et validé</strong> mes résultats expérimentaux par rapport aux modèles théoriques, ce qui m’a permis de mieux comprendre les compromis entre performance énergétique, contraintes environnementales et faisabilité technique.
-
-			  </p>
-			</div>
-		  </div>
-
-
-		  <!-- Bloc 2 -->
-		  <div class="ingenierie-card" style="flex: 1; min-width: 300px; max-width: 48%;">
-			<div class="card highlight">
-			  <img src="Atos.jpg" alt="Stage de 3ème 2020" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px;">
-			  <h3 data-i18n='exp.stage3.title'>Stage de 3ème (2020)</h3>
+			  <img src="Atos.jpg" alt="Stage de 3ème 2020" 
+				style="display: block; width: 70%; max-width: 400px; height: auto; border-radius: 8px; margin: 0 auto 10px auto;">
+ 			  <h3 data-i18n='exp.stage3.title'>Stage de 3ème (2020)</h3>
 			  <p data-i18n="exp.stage3.description">
-				Lors de cette première immersion dans le monde professionnel, j’ai découvert les différents métiers et l’environnement de travail au sein d’une entreprise technologique. J’ai pu observer plusieurs domaines d’activité tels que l’ingénierie, le <strong>contrôle qualité</strong>, les <strong>méthodes</strong>, la <strong>production</strong> et la <strong>logistique</strong>. J’ai également été initiée à divers outils professionnels, notamment le logiciel SAP, la conception assistée par ordinateur (Pro-Engineer). <br>
-				Cette expérience m’a aidé à développer des qualités essentielles en milieu professionnel comme <strong>l’écoute, la rigueur, la curiosité et la capacité d’adaptation.</strong>
+				Lors de cette première immersion dans le monde professionnel, j’ai découvert les différents métiers et l’environnement de travail au sein d’une entreprise technologique. J’ai pu observer plusieurs domaines d’activité tels que l’<strong>ingénierie</strong>, le <strong>contrôle qualité</strong>, les <strong>méthodes</strong>, la <strong>production</strong> et la <strong>logistique</strong>. J’ai également été initiée à divers outils professionnels, notamment le logiciel SAP, la conception assistée par ordinateur (Pro-Engineer). <br>
+				Cette expérience m’a aidé à développer des qualités essentielles en milieu professionnel comme <strong>l’écoute, la rigueur, la curiosité, la capacité d’adaptation et le travail en équipe.</strong>
 			  </p>
 			</div>
 		  </div>
+		  
+		  <!-- Bloc 2 -->
+		  		  <div class="ingenierie-card" style="width: 100%; margin-bottom: 20px;">
+			<div class="card highlight">
+				<div class="photos" style="display: flex; gap: 80px; justify-content: center; margin-bottom: 10px;">
+				  <img src="panneau8.jpg" alt="Photo 1" style="width: 20%; height: auto; border-radius: 8px;">
+				  <img src="moii3.jpg" alt="Photo 2" style="width: 20%; height: auto; border-radius: 8px;">
+				  <img src="herbes3.png" alt="Photo 2" style="width: 20%; height: auto; border-radius: 8px;">
+				</div>
+				
+			  <h3 data-i18n="ingenierie.item1.title">Projet scientifique – Transition énergétique (TIPE)</h3>
+			  <p data-i18n="ingenierie.item1.description"> 
+				Dans le cadre de mon TIPE, projet axé sur les <strong>énergies renouvelables</strong> et la <strong>transition écologique</strong>, j’ai étudié l’influence néfaste de la température sur les performances des panneaux photovoltaïques et recherché des solutions pour <strong>améliorer leur rendement et réduire les pertes énergétiques</strong>.<br>
+				Après une analyse théorique, j’ai effectué des <strong>mesures expérimentales</strong> afin de quantifier ces effets et de tester plusieurs méthodes de refroidissement, actives et passives. J’ai ensuite <strong>interprété, comparé et validé</strong> mes résultats expérimentaux par rapport aux modèles théoriques, ce qui m’a permis de retenir deux solutions passives efficaces, alliant performance énergétique, contraintes environnementales et faisabilité technique : 
+			  </p> 
+				<ul>
+				  <li style="display: flex; align-items: center; gap: 40px;">
+					<div data-i18n="ingenierie.sol1">
+					  <strong>1ère solution : poser les panneaux sur les lacs</strong><br>
+					  <em>Avantages :</em> simplicité, exploitation de la fraîcheur naturelle de l’eau.<br>
+					  <em>Inconvénient :</em> efficacité limitée.
+					</div>
+					<img src="lac.jpg" alt="Panneaux photovoltaïques sur un lac" 
+						 style="width: 150px; height: auto; border-radius: 8px;">
+				  </li>
 
+				  <li style="display: flex; align-items: center; gap: 20px;">
+					<div data-i18n="ingenierie.sol2">
+					  <strong>2ème solution : ailettes de refroidissement</strong><br>
+					  <em>Avantages :</em> capacité à dissiper efficacement la chaleur.<br>
+					  <em>Inconvénients :</em> contrainte d’installation, système plus encombrant.
+					</div>
+					<img src="ailette.jpg" alt="Panneaux photovoltaïques avec ailettes de refroidissement" 
+						 style="width: 150px; height: auto; border-radius: 8px;">
+				  </li>
+				</ul>
+
+
+			</div>
+		  </div>
 		</div>
 	  </div>
 	</section>
@@ -328,7 +350,7 @@
 
 	<!-- Volley-ball avec 2 photos -->
 	<li style="margin-bottom: 30px;">
-	  <div style="display: flex; align-items: flex-start; gap: 20px; flex-wrap: nowrap;">
+	  <div style="display: flex; list-style-type: none; align-items: flex-start; gap: 20px; flex-wrap: nowrap;">
 
 		<!-- Bloc photos (1/3 de la largeur) -->
 		<div class="photos" 
@@ -345,7 +367,7 @@
 		  
 		  <!-- Phrase avant la liste -->
 		  <p data-i18n="hobbies.volleyball.description" style="margin: 0 0 2px 0;">
-			J'ai joué au volley-ball en club pendant <strong>12 ans</strong> :
+			J'ai joué en club pendant <strong>12 ans</strong> :
 		  </p>
 
 		  <ul style="padding-left: 20px; list-style-type: disc; line-height: 1; margin: 0 0 10px 0;">
@@ -395,7 +417,7 @@
 			 style="flex: 1; line-height: 1.4; box-sizing: border-box;">
 		  <strong data-i18n="hobbies.piano.title">Piano</strong>
 		  <p data-i18n="hobbies.piano.description">
-			J'ai joué du piano pendant <strong>5ans</strong> ainsi qu'un peu de solvège. J'ai notamment participer à des représentations.
+			J'ai joué du piano pendant <strong>5 ans</strong> ainsi qu'un peu de solvège. J'ai notamment participé à des représentations.
 		  </p>
 		</div>
 
@@ -420,8 +442,8 @@
 		<div class="hobby-content" style="flex: 1; line-height: 1.4; box-sizing: border-box;">
 		  <strong data-i18n="hobbies.hiking.title">Randonnée</strong>
 		  <ul style="list-style-type: disc; padding-left: 20px; margin: 5px 0 0 0;">
-			<li data-i18n="hobbies.hiking.description1">Passion pour la <strong>montagne</strong> et la découverte de nouveaux paysages, notamment les sentiers des Alpes.</li>
-			<li data-i18n="hobbies.hiking.description2">Projet <strong>GR20</strong> en Corse</li>
+			<li data-i18n="hobbies.hiking.description1">Je suis passionnée pour la <strong>montagne</strong> et la découverte de nouveaux paysages, notamment les sentiers des Alpes.</li>
+			<li data-i18n="hobbies.hiking.description2">Mon projet est de faire le <strong>GR20</strong> en Corse</li>
 		  </ul>
 		</div>
 
@@ -500,6 +522,12 @@
 	p {
       text-align: justify;
     }
+	
+	.hobby-list {
+	  list-style-type: none;
+	  padding-left: 0;
+	  margin: 0;
+	}
 
 
 	</style>
