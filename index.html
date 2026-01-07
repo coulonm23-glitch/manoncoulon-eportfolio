@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>E-Portfolio – Manon Coulon</title>
-  <meta name="description" content="E-portfolio de Manon Coulon : accueil, CV, engagement civique et mobilité.">
+  <meta name="description" content="E-portfolio de Manon Coulon : accueil, CV, engagement civique et durable et mobilité.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -17,6 +17,7 @@
   <!-- Optionnel pour compatibilité avec tous les navigateurs -->
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   
+   
   <style>
 
 	.site-header {
@@ -34,7 +35,7 @@
 
 		body {
 		  padding-top: 80px; /* mettre la hauteur de ton header approximative */
-		  margin: 10;
+		  margin: 2;
 		  padding: 0;
 		}
 
@@ -52,8 +53,25 @@
 		  margin: 0;
 		  width: 100vw;     /* prend toute la largeur visible */
 		  gap: 1rem
+		  padding: 0 20px; /* Réduit un peu les 80px pour gagner de la place */
+		  box-sizing: border-box;
 		  }
 
+
+		.nav {
+			display: flex;
+			flex: 1;               /* Dit à la nav de prendre tout l'espace vide restant */
+			justify-content: space-around; /* Répartit les liens uniformément */
+			align-items: center;
+			margin: 0 20px;        /* Ajoute une marge entre la nav et le logo/boutons */
+		}
+
+		.nav a {
+			text-decoration: none;
+			color: inherit;
+			white-space: nowrap;   /* Empêche les liens de passer sur deux lignes */
+			font-size: 0.9rem;     /* Optionnel : réduit légèrement la taille si ça déborde */
+		} 
 		section {
 		  scroll-margin-top: 80px; /* hauteur du header fixe */
 }
@@ -75,7 +93,7 @@
         <a href="#accueil" data-i18n="btn.accueil">Accueil</a>
 		<a href="#ingenierie" data-i18n="btn.ingenierie">Cours d'ingénierie</a>
 		<a href="#mobilite" data-i18n="btn.mob">Mobilité</a>
-		<a href="#engagement" data-i18n="btn.civique">Engagement civique</a>
+		<a href="#engagement" data-i18n="btn.civique">Engagement civique et durable</a>
 		<a href="#sports" data-i18n="btn.sport">Sports & Activités</a>
 		<a href="#carrière" data-i18n="btn.dev">Développement de carrière</a>
 		<a href="#contact"data-i18n="btn.contact">Contact</a>
@@ -281,7 +299,7 @@
 	<!-- 4. Engagement civique -->
 	<section id="engagement" class="section alt">
 	  <div class="container">
-		<h2 data-i18n="btn.civique">Engagement civique</h2>
+		<h2 data-i18n="btn.civique">Engagement civique et durable</h2>
 		<p data-i18n='engagement.intro'>Mes actions dans le bénévolat, l'événementiel, le service communautaire et les projets citoyens.</p>
 
 		<div class="engagement-grid" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; align-items: stretch;">
@@ -324,14 +342,24 @@
 				<img src="chili.jpg" alt="Drapeau du Chili" style="width: 32px; height: 22px; border-radius: 4px;">
 				<h3 data-i18n="engagement3.title" style="margin: 0;">Projet solidaire – Voyage humanitaire au Chili (été 2026)</h3>
 			  </div>
-
+			  
 			  <ul style="list-style-type: disc; padding-left: 20px; margin: 0;">
 				<li style="margin-bottom: 6px;" data-i18n="engagement3.description1">Projet de voyage solidaire avec le club <strong>Human7</strong> visant à <strong>aider, tutorer et sensibiliser des enfants</strong> dans des écoles ou des orphelinats au Chili.</li>
 				<li style="margin-bottom: 6px;" data-i18n="engagement3.description2">Objectifs : favoriser l’accès à l’éducation, encourager l’ouverture culturelle et renforcer les valeurs de solidarité internationale.</li>
 				<li style="margin-bottom: 6px;" data-i18n="engagement3.description3">Une expérience humaine et éducative centrée sur l’échange et l’entraide.</li>
-			  </ul>
+			  </ul>	  
 			</div>
 		  </div>
+				<p style="margin-top: 15px; font-style: italic;" data-i18n="engagement3.infographie_intro">
+					Retrouvez ci-dessous l'infographie complète du <strong>Projet Chili 2026</strong>, détaillant notre organisation, nos objectifs pédagogiques en partenariat avec l'Ambassade de France, ainsi que notre plan de financement solidaire.
+				</p>
+
+				<div style="margin-top: 15px; text-align: center;">
+				  <img src="Chili_project.jpeg"
+					   alt="Infographie du projet solidaire au Chili"
+					   style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+				</div>
+
 
 		</div>
 	  </div>
