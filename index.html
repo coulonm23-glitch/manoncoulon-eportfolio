@@ -19,6 +19,15 @@
   
    
   <style>
+		  /* Une seule section visible à la fois */
+		main > section.section { display: none; }
+		main > section.section.active { display: block; }
+
+		/* Onglet actif dans le menu */
+		.nav a.active {
+		  font-weight: 700;
+		  border-bottom: 2px solid currentColor;
+		}
 
 	.site-header {
 		  position: fixed; /* fixe le header en haut */
@@ -568,6 +577,24 @@
   <script>
     const y = document.getElementById('year');
     if (y) y.textContent = new Date().getFullYear();
+  </script>
+  <script>
+  (function () {
+    const sections = document.querySelectorAll('main > section');
+    const links = document.querySelectorAll('.nav a[href^="#"]');
+    const ids = Array.from(sections).map(s => s.id);
+
+    function showTab() {
+      let id = decodeURIComponent(location.hash.slice(1));
+      if (!ids.includes(id)) id = 'accueil'; // onglet par défaut
+      sections.forEach(s => s.classList.toggle('active', s.id === id));
+      links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+      window.scrollTo(0, 0);
+    }
+
+    window.addEventListener('hashchange', showTab);
+    showTab();
+  })();
   </script>
   <script src="theme-lang.js" defer></script>
   <script src="cv-extract.js" defer></script>
