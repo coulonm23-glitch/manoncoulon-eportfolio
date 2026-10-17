@@ -35,9 +35,8 @@
 		'engagement3.description1' : "Projet de voyage solidaire avec le club <strong>Human7</strong> visant à <strong>aider, tutorer et sensibiliser des enfants</strong> dans des écoles ou des orphelinats au Chili.",
 		'engagement3.description2' : "Objectifs : favoriser l’accès à l’éducation, encourager l’ouverture culturelle et renforcer les valeurs de solidarité internationale.",
 		'engagement3.description3' : "Une expérience humaine et éducative centrée sur l’échange et l’entraide.",
-		"engagement3.infographie_intro": "Retrouvez ci-dessous l'infographie complète du <strong>Projet Chili 2026</strong>, détaillant notre organisation, nos objectifs pédagogiques en partenariat avec l'Ambassade de France, ainsi que notre plan de financement solidaire. À côté, une photo de notre équipe : grâce à notre <strong>pitch</strong> de présentation du projet, nous avons remporté un <strong>certificat</strong> qui valorise le développement de notre <strong>communication</strong>, de notre <strong>créativité</strong>, de notre <strong>esprit critique</strong> et de notre <strong>travail d'équipe</strong>.",
 		"engagement4.title": "🌍 Atelier – La Fresque du Climat",
-		"engagement4.description1": "Atelier collaboratif suivi dès ma première année à l'<strong>ENSEEIHT</strong>, avec d'autres élèves-ingénieurs.",
+		"engagement4.description1": "Atelier collaboratif effectuer durant ma première année à l'<strong>ENSEEIHT</strong>, avec d'autres élèves-ingénieurs.",
 		"engagement4.description2": "Compréhension des causes et des conséquences du <strong>dérèglement climatique</strong> à travers un travail de groupe.",
 		"engagement4.description3": "Prise de conscience du rôle que nous aurons à jouer, en tant que futurs ingénieurs, face à ces enjeux.",
 		"engagement5.title": "⚖️ Pièce interactive – Le Procès de King Kong",
@@ -117,7 +116,7 @@
 	  "carriere.induxion.title": "Journée d'entrepreneuriat – Projet « induXion »",
 		"carriere.induxion.description1": "Journée dédiée à l'entrepreneuriat, avec pour objectif de créer un <strong>projet concret</strong> répondant à un <strong>problème du quotidien</strong>.",
 		"carriere.induxion.description2": "Notre idée, <strong>induXion</strong> : une <strong>plaque à induction</strong> qui prolonge la plaque existante des étudiants, souvent trop petite pour cuisiner confortablement.",
-		"carriere.induxion.description3": "Avec mon équipe, nous avons remporté le <strong>certificat</strong> du projet.",
+		"carriere.induxion.description3": "Avec mon équipe, grâce à notre <strong>pitch</strong> de présentation du projet, nous avons remporté un <strong>certificat</strong> qui valorise le développement de notre <strong>communication</strong>, de notre <strong>créativité</strong>, de notre <strong>esprit critique</strong> et de notre <strong>travail d'équipe</strong>.",
 	  'futur.description1': "En effet, l'ingénierie ne concerne pas seulement la science et la technologie, mais aussi les personnes, le progrès et les objectifs. En apprenant auprès de professionnels inspirants et en travaillant sur des projets internationaux, j'espère contribuer à un avenir",
 	  'futur.description2': "plus propre, plus intelligent et plus connecté."
 	  
@@ -151,9 +150,8 @@
 	  'engagement3.description1' : "Solidarity travel project with the <strong>Human7</strong> club aimed at <strong>helping, tutoring, and raising awareness among children</strong> in schools and orphanages in Chile.",
 	  'engagement3.description2' : "Objectives : to promote access to education, encourage cultural openness, and reinforce the values of international solidarity.",
 	  'engagement3.description3' : "A human and educational experience focused on exchange and mutual aid.",
-	  "engagement3.infographie_intro": "Below is the complete infographic of the <strong>Chile 2026 Project</strong>, detailing our organisation, our educational goals in partnership with the French Embassy, and our solidarity funding plan. Alongside it, a photo of our team: thanks to our project <strong>pitch</strong>, we won a <strong>certificate</strong> recognising the development of our <strong>communication</strong>, our <strong>creativity</strong>, our <strong>critical thinking</strong> and our <strong>teamwork</strong>.",
 	  "engagement4.title": "🌍 Workshop – Climate Fresk",
-	  'engagement4.description1': "Collaborative workshop attended in my first year at <strong>ENSEEIHT</strong>, alongside fellow engineering students.",
+	  'engagement4.description1': "Collaborative workshop made during my first year at <strong>ENSEEIHT</strong>, alongside fellow engineering students.",
 	  "engagement4.description2": "Understanding the causes and consequences of <strong>climate change</strong> through teamwork.",
 	  "engagement4.description3": "Realising the role we will have to play, as future engineers, in addressing these challenges.",
 	  "engagement5.title": "⚖️ Interactive play – The Trial of King Kong",
@@ -233,8 +231,7 @@
 	  "carriere.induxion.title": "Entrepreneurship Day – \"induXion\" Project",
 	  "carriere.induxion.description1": "A day dedicated to entrepreneurship, with the goal of creating a <strong>concrete project</strong> that solves an <strong>everyday problem</strong>.",
       "carriere.induxion.description2": "Our idea, <strong>induXion</strong>: an <strong>induction hob</strong> that extends the existing student hob, which is often too small to cook comfortably.",
-	  "carriere.induxion.description3": "With my team, we won the project <strong>certificate</strong>.",
-	  'futur.description1': "Indeed engineering is not only about science and technology, but also about people, progress, and purpose. By learning from inspiring professionals and working on global projects, I hope to contribute to a",
+	  "carriere.induxion.description3": "With my team, thanks to our project <strong>pitch</strong>, we won a <strong>certificate</strong> recognising the development of our <strong>communication</strong>, our <strong>creativity</strong>, our <strong>critical thinking</strong> and our <strong>teamwork</strong>.",'futur.description1': "Indeed engineering is not only about science and technology, but also about people, progress, and purpose. By learning from inspiring professionals and working on global projects, I hope to contribute to a",
 	  'futur.description2': " cleaner, smarter, and more connected future."
     }
   };
