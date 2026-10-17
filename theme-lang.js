@@ -117,7 +117,7 @@
 	  "carriere.induxion.title": "Journée d'entrepreneuriat – Projet « induXion »",
 		"carriere.induxion.description1": "Journée dédiée à l'entrepreneuriat, avec pour objectif de créer un <strong>projet concret</strong> répondant à un <strong>problème du quotidien</strong>.",
 		"carriere.induxion.description2": "Notre idée, <strong>induXion</strong> : une <strong>plaque à induction</strong> qui prolonge la plaque existante des étudiants, souvent trop petite pour cuisiner confortablement.",
-		"carriere.induxion.description3": "Avec mon équipe, nous avons remporté le <strong>certificat</strong> du projet, qui valorise notre <strong>créativité</strong>, notre <strong>esprit d'équipe</strong> et notre capacité à présenter une idée de manière convaincante.",
+		"carriere.induxion.description3": "Avec mon équipe, nous avons remporté le <strong>certificat</strong> du projet.",
 	  'futur.description1': "En effet, l'ingénierie ne concerne pas seulement la science et la technologie, mais aussi les personnes, le progrès et les objectifs. En apprenant auprès de professionnels inspirants et en travaillant sur des projets internationaux, j'espère contribuer à un avenir",
 	  'futur.description2': "plus propre, plus intelligent et plus connecté."
 	  
@@ -233,7 +233,7 @@
 	  "carriere.induxion.title": "Entrepreneurship Day – \"induXion\" Project",
 	  "carriere.induxion.description1": "A day dedicated to entrepreneurship, with the goal of creating a <strong>concrete project</strong> that solves an <strong>everyday problem</strong>.",
       "carriere.induxion.description2": "Our idea, <strong>induXion</strong>: an <strong>induction hob</strong> that extends the existing student hob, which is often too small to cook comfortably.",
-	  "carriere.induxion.description3": "With my team, we won the project <strong>certificate</strong>, recognising our <strong>creativity</strong>, our <strong>team spirit</strong> and our ability to present an idea convincingly.",
+	  "carriere.induxion.description3": "With my team, we won the project <strong>certificate</strong>.",
 	  'futur.description1': "Indeed engineering is not only about science and technology, but also about people, progress, and purpose. By learning from inspiring professionals and working on global projects, I hope to contribute to a",
 	  'futur.description2': " cleaner, smarter, and more connected future."
     }
