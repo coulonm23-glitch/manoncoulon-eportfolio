@@ -16,7 +16,7 @@
 		'btn.ingenierie': 'Projets techniques',
 		'btn.mob':'Mobilité',
 		'btn.civique' : 'Engagement civique et durable',
-		'btn.' : 'Sports & Activités',
+		'btn.sport' : 'Sports & Activités',
 		'btn.dev' : 'Développement de carrière',
 		'btn.contact' : 'Contact',
 		'nav.accueil': 'Accueil',
