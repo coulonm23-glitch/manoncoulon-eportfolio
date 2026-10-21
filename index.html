@@ -61,7 +61,7 @@
 		  max-width: 100%;  /* empêche la limite centrale */
 		  margin: 0;
 		  width: 100vw;     /* prend toute la largeur visible */
-		  gap: 1rem
+		  gap: 1rem;
 		  padding: 0 20px; /* Réduit un peu les 80px pour gagner de la place */
 		  box-sizing: border-box;
 		  }
@@ -74,13 +74,15 @@
 			align-items: center;
 			margin: 0 20px;        /* Ajoute une marge entre la nav et le logo/boutons */
 		}
-
+		
 		.nav a {
-			text-decoration: none;
-			color: inherit;
-			white-space: nowrap;   /* Empêche les liens de passer sur deux lignes */
-			font-size: 0.9rem;     /* Optionnel : réduit légèrement la taille si ça déborde */
-		} 
+		  text-decoration: none;
+		  color: inherit;
+		  white-space: normal;
+		  text-align: center;
+		  line-height: 1.2;
+		  font-size: 0.85rem;
+		}
 		section {
 		  scroll-margin-top: 80px; /* hauteur du header fixe */
 }
@@ -99,13 +101,13 @@
         </div>
       </div>
       <nav class="nav">
-        <a href="#accueil" data-i18n="btn.accueil">Accueil</a>
-		<a href="#ingenierie" data-i18n="btn.ingenierie">Cours d'ingénierie</a>
+        <a href="#accueil" data-i18n="btn.accueil">Accueil</a>		
+		<a href="#ingenierie" data-i18n="btn.ingenierie">Projets techniques</a>
 		<a href="#mobilite" data-i18n="btn.mob">Mobilité</a>
 		<a href="#engagement" data-i18n="btn.civique">Engagement civique et durable</a>
 		<a href="#sports" data-i18n="btn.sport">Sports & Activités</a>
-		<a href="#carrière" data-i18n="btn.dev">Développement de carrière</a>
-		<a href="#contact"data-i18n="btn.contact">Contact</a>
+		<a href="#ppp" data-i18n="btn.ppp">Projet professionnel (PPP)</a>
+		<a href="#contact" data-i18n="btn.contact">Contact</a>
       </nav>
       <div class="toggles">
           <button id="theme-toggle" class="btn" type="button" aria-label="Basculer thème" data-i18n-attr="aria-label:aria.themeToggle">☀/☽</button>
@@ -135,7 +137,7 @@
 			  <h2 data-i18n="sections.accueil">Accueil</h2>
 			  <p>
 				<span data-i18n="accueil.intro1">Bonjour, je suis</span> <strong>Manon Coulon</strong>.
-				<span data-i18n="accueil.intro2">Agée de 20 ans, je suis actuellement étudiante en deuxième année d'ingénierie à l'<strong>ENSEEIHT</strong> à Toulouse, avec une spécialisation en électronique, énergie électrique et automatisation(3EA). J'ai toujours été passionnée par la manière dont les systèmes intelligents et les technologies renouvelables peuvent fonctionner ensemble pour façonner un monde plus durable et plus connecté.</span>
+				<span data-i18n="accueil.intro2">Agée de 20 ans, je suis actuellement étudiante en deuxième année d'ingénierie à l'<strong>ENSEEIHT</strong> à Toulouse, avec une spécialisation en électronique, énergie électrique et automatisation (3EA). J'ai toujours été passionnée par la manière dont les systèmes intelligents et les technologies renouvelables peuvent fonctionner ensemble pour façonner un monde plus durable et plus connecté.
 			  </p>
 			  <ul class="quick-facts">
 				<li>
@@ -172,9 +174,6 @@
 						  allowfullscreen>
 				  </iframe>
 				</div>
-				
-				
-				<p class="video-note" data-i18n="elevator.note">Durée : ~3 minutes • Format : MP4</p>
 			  </div>
 			</div>
 
@@ -209,23 +208,23 @@
 	<!-- 2. Cours d'ingénierie -->
 	<section id="ingenierie" class="section alt">
 	  <div class="container">
-		<h2 data-i18n="btn.ingenierie">Cours d'ingénierie</h2>
+		<h2 data-i18n="btn.ingenierie">Projets techniques</h2>
 
 		<div class="ingenierie-grid" style="display: block; gap: 20px;">
 		  
 		  <!-- Bloc 1 -->
-		  <div class="ingenierie-card" style="width: 100%; margin-bottom: 20px;">
-			<div class="card highlight">
-			  <img src="Atos.jpg" alt="Stage de 3ème 2020" 
-				style="display: block; width: 70%; max-width: 400px; height: auto; border-radius: 8px; margin: 0 auto 10px auto;">
- 			  <h3 data-i18n='exp.stage3.title'>Stage de 3ème (2020)</h3>
-			  <p data-i18n="exp.stage3.description">
-				Lors de cette première immersion dans le monde professionnel, j’ai découvert les différents métiers et l’environnement de travail au sein d’une entreprise technologique. J’ai pu observer plusieurs domaines d’activité tels que l’<strong>ingénierie</strong>, le <strong>contrôle qualité</strong>, les <strong>méthodes</strong>, la <strong>production</strong> et la <strong>logistique</strong>. J’ai également été initiée à divers outils professionnels, notamment le logiciel SAP, la conception assistée par ordinateur (Pro-Engineer). <br>
-				Cette expérience m’a aidé à développer des qualités essentielles en milieu professionnel comme <strong>l’écoute, la rigueur, la curiosité, la capacité d’adaptation et le travail en équipe.</strong>
-			  </p>
+		  	<div class="card highlight" style="margin: 20px 0; display: flex; gap: 20px; flex-wrap: wrap; align-items: center;">
+			  <div style="flex: 1 1 280px; max-width: 400px;">
+				<img src="Atos.jpg" alt="Stage de 3ème 2020" style="width: 100%; height: auto; border-radius: 8px;">
+			  </div>
+			  <div style="flex: 2 1 320px;">
+				  <h3 data-i18n='exp.stage3.title'>Stage de 3ème (2020)</h3>
+					  <p data-i18n="exp.stage3.description">
+						Lors de cette première immersion dans le monde professionnel, j’ai découvert les différents métiers et l’environnement de travail au sein d’une entreprise technologique. J’ai pu observer plusieurs domaines d’activité tels que l’<strong>ingénierie</strong>, le <strong>contrôle qualité</strong>, les <strong>méthodes</strong>, la <strong>production</strong> et la <strong>logistique</strong>. J’ai également été initiée à divers outils professionnels, notamment le logiciel SAP, la conception assistée par ordinateur (Pro-Engineer). <br>
+						Cette expérience m’a aidée à développer des qualités essentielles en milieu professionnel comme <strong>l’écoute, la rigueur, la curiosité, la capacité d’adaptation et le travail en équipe.</strong>
+					  </p>
+			  </div>
 			</div>
-		  </div>
-		  
 		  <!-- Bloc 2 -->
 		  <div class="ingenierie-card" style="width: 100%; margin-bottom: 20px;">
 			<div class="card highlight">
@@ -264,6 +263,21 @@
 
 			</div>
 		   </div>
+		   
+		   	<!-- 3. Journée d'entrepreneuriat : induXion -->
+			<div class="card highlight" style="margin: 20px 0; display: flex; gap: 20px; flex-wrap: wrap; align-items: center;">
+			  <div style="flex: 1 1 280px; max-width: 400px;">
+				<img src="induXion.jpg" alt="Projet induXion – notre équipe et le certificat" style="width: 100%; height: auto; border-radius: 8px;">
+			  </div>
+			  <div style="flex: 2 1 320px;">
+				<h3 data-i18n="carriere.induxion.title">Journée d'entrepreneuriat – Projet « induXion »</h3>
+				<ul style="list-style-type: disc; padding-left: 20px; margin: 0;">
+				  <li style="margin-bottom: 6px;" data-i18n="carriere.induxion.description1">Journée dédiée à l'entrepreneuriat, avec pour objectif de créer un <strong>projet concret</strong> répondant à un <strong>problème du quotidien</strong>.</li>
+				  <li style="margin-bottom: 6px;" data-i18n="carriere.induxion.description2">Notre idée, <strong>induXion</strong> : une <strong>plaque à induction</strong> qui prolonge la plaque existante des étudiants, souvent trop petite pour cuisiner confortablement.</li>
+				  <li style="margin-bottom: 6px;" data-i18n="carriere.induxion.description3">Avec mon équipe, grâce à notre <strong>pitch</strong> de présentation du projet, nous avons remporté un <strong>certificat</strong> qui valorise le développement de notre <strong>communication</strong>, de notre <strong>créativité</strong>, de notre <strong>esprit critique</strong> et de notre <strong>travail d'équipe</strong>.</li>
+				</ul>
+			  </div>
+			</div>
 		</div>
 	  </div>
 	</section>
@@ -530,7 +544,7 @@
 			 style="flex: 1; line-height: 1.4; box-sizing: border-box;">
 		  <strong data-i18n="hobbies.piano.title">Piano</strong>
 		  <p data-i18n="hobbies.piano.description">
-			J'ai joué du piano pendant <strong>5 ans</strong> ainsi qu'un peu de solvège. J'ai notamment participé à des représentations.
+			J'ai joué du piano pendant <strong>5 ans</strong> ainsi qu'un peu de solfège. J'ai notamment participé à des représentations.
 		  </p>
 		</div>
 
@@ -571,33 +585,95 @@
 
 
 
-
-  <!-- 6. Développement de carrière -->
-	<section id="carrière" class="section alt">
+	<!-- 6. Projet professionnel (PPP) -->
+	<section id="ppp" class="section alt">
 	  <div class="container">
-		<h2 data-i18n="btn.dev">Développement de carrière</h2>
+		<h2 data-i18n="ppp.title">Projet professionnel (PPP)</h2>
+		<p class="section-intro" data-i18n="ppp.intro">Cet onglet rassemble les documents de mon projet professionnel : CV, candidature, stages, réseau, pitch vidéo, mobilité et recherches PPP.</p>
+
+		<!-- 1. CV -->
+		<h3 data-i18n="ppp.cv.title">CV</h3>
 		<p class="section-intro">
 		  <span data-i18n="cv.intro">Vous pouvez parcourir mon CV ci‑dessous ou le</span> <a id="cv-download-top" href="CV_2026-10-17_Manon_Coulon.pdf" download data-i18n="cv.download" data-url-fr="CV_2026-10-17_Manon_Coulon.pdf" data-url-en="CV_2026-10-17_Manon_Coulon_Anglais.pdf">télécharger</a>.
 		</p>
 		<div id="cv-extract-status" class="card" style="margin: 12px 0; display:none;"></div>
 		<div class="pdf-viewer">
-		  <object id="pdf-object" data="CV_2026-10-17_Manon_Coulon.pdf" type="application/pdf" aria-label="Visionneuse du CV" data-url-fr="CV_2026-17-10_Manon_Coulon.pdf" data-url-en="CV_2026-10-17_Manon_Coulon_Anglais.pdf">
+		  <object id="pdf-object" data="CV_2026-10-17_Manon_Coulon.pdf" type="application/pdf" aria-label="Visionneuse du CV" data-url-fr="CV_2026-10-17_Manon_Coulon.pdf" data-url-en="CV_2026-10-17_Manon_Coulon_Anglais.pdf">
 			<iframe id="pdf-iframe" src="CV_2026-10-17_Manon_Coulon.pdf" title="Visionneuse du CV" data-url-fr="CV_2026-10-17_Manon_Coulon.pdf" data-url-en="CV_2026-10-17_Manon_Coulon_Anglais.pdf"></iframe>
 		  </object>
 		</div>
 
-		<!-- Journée d'entrepreneuriat : induXion -->
-		<div class="card highlight" style="margin: 20px 0; display: flex; gap: 20px; flex-wrap: wrap; align-items: center;">
-		  <div style="flex: 1 1 280px; max-width: 400px;">
-			<img src="induXion.jpg" alt="Projet induXion – notre équipe et le certificat" style="width: 100%; height: auto; border-radius: 8px;">
+		<!-- 2. Dossier de candidature -->
+		<div class="card highlight" style="margin: 20px 0;">
+		  <h3 data-i18n="ppp.apply.title">Dossier de candidature</h3>
+		  <p data-i18n="ppp.apply.text">Candidature complète pour une offre de mon choix : offre d'emploi, lettre de motivation et CV, en français et en anglais.</p>
+		  <div class="cta-row">
+			<a class="btn" href="Offre_emploi.pdf" target="_blank" rel="noopener" data-i18n="ppp.apply.job">Offre d'emploi visée</a>
+			<a class="btn" href="Lettre_motivation_FR.pdf" target="_blank" rel="noopener" data-i18n="ppp.apply.letterFr">Lettre de motivation (FR)</a>
+			<a class="btn" href="Lettre_motivation_EN.pdf" target="_blank" rel="noopener" data-i18n="ppp.apply.letterEn">Lettre de motivation (EN)</a>
+			<a class="btn" href="CV_2026-10-17_Manon_Coulon.pdf" target="_blank" rel="noopener" data-i18n="ppp.apply.cvFr">CV (FR)</a>
+			<a class="btn" href="CV_2026-10-17_Manon_Coulon_Anglais.pdf" target="_blank" rel="noopener" data-i18n="ppp.apply.cvEn">CV (EN)</a>
 		  </div>
-		  <div style="flex: 2 1 320px;">
-			<h3 data-i18n="carriere.induxion.title">Journée d'entrepreneuriat – Projet « induXion »</h3>
-			<ul style="list-style-type: disc; padding-left: 20px; margin: 0;">
-			  <li style="margin-bottom: 6px;" data-i18n="carriere.induxion.description1">Journée dédiée à l'entrepreneuriat, avec pour objectif de créer un <strong>projet concret</strong> répondant à un <strong>problème du quotidien</strong>.</li>
-			  <li style="margin-bottom: 6px;" data-i18n="carriere.induxion.description2">Notre idée, <strong>induXion</strong> : une <strong>plaque à induction</strong> qui prolonge la plaque existante des étudiants, souvent trop petite pour cuisiner confortablement.</li>
-			  <li style="margin-bottom: 6px;" data-i18n="carriere.induxion.description3">Avec mon équipe, grâce à notre <strong>pitch</strong> de présentation du projet, nous avons remporté un <strong>certificat</strong> qui valorise le développement de notre <strong>communication</strong>, de notre <strong>créativité</strong>, de notre <strong>esprit critique</strong> et de notre <strong>travail d'équipe</strong>.</li>
-			</ul>
+		</div>
+
+		<!-- 3. Rapports de stage -->
+		<div class="card highlight" style="margin: 20px 0;">
+		  <h3 data-i18n="ppp.internship.title">Rapport de stage</h3>
+		  <p data-i18n="ppp.internship.text">Rapport de mon stage en woofing à Little Black Hill Farm à Killarney en Irlande:</p>
+		  <div class="cta-row">
+			<a class="btn" href="conv-stage-woofing.pdf" target="_blank" rel="noopener" data-i18n="ppp.internship.report">Rapport de stage</a>
+		  </div>
+		</div>
+
+		<!-- 4. LinkedIn -->
+		<div class="card highlight" style="margin: 20px 0;">
+		  <h3 data-i18n="ppp.linkedin.title">Profil LinkedIn</h3>
+		  <p data-i18n="ppp.linkedin.text">Mon profil professionnel, avec mon parcours, mes compétences et mes projets.</p>
+		  <div class="cta-row">
+			<a class="btn" href="https://www.linkedin.com/in/coulonmanon/" target="_blank" rel="noopener noreferrer" data-i18n="ppp.linkedin.btn">Voir mon profil LinkedIn</a>
+		  </div>
+		</div>
+
+		<!-- 5. Pitch vidéo présent – passé – futur -->
+		<div class="card highlight" style="margin: 20px 0;">
+		  <h3 data-i18n="ppp.pitch.title">Pitch vidéo : présent – passé – futur</h3>
+		  <p data-i18n="ppp.pitch.text">Vidéo de 2 à 3 minutes présentant qui je suis aujourd'hui, mon parcours et mon projet professionnel.</p>
+		  <div class="video-container">
+			<iframe width="560" height="315" style="max-width:100%;"
+					src="https://www.youtube.com/embed/BhMaF11gimE"
+					title="Pitch vidéo"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen></iframe>
+		  </div>
+		</div>
+
+		<!-- 6. Mobilité : feuille de route + empreinte carbone -->
+		<div class="card highlight" style="margin: 20px 0;">
+		  <h3 data-i18n="ppp.mobility.title">Mobilité : feuille de route et empreinte carbone</h3>
+		  <p data-i18n="ppp.mobility.text">Mon projet de mobilité internationale, avec son calendrier et l'estimation de son empreinte carbone.</p>
+		  <div class="cta-row">
+			<a class="btn" href="Feuille_de_route_mobilite.pdf" target="_blank" rel="noopener" data-i18n="ppp.mobility.roadmap">Feuille de route (PDF)</a>
+			<a class="btn" href="Empreinte_carbone.pdf" target="_blank" rel="noopener" data-i18n="ppp.mobility.carbon">Empreinte carbone (PDF)</a>
+		  </div>
+		</div>
+
+		<!-- 7. Réseautage -->
+		<div class="card highlight" style="margin: 20px 0;">
+		  <h3 data-i18n="ppp.network.title">Réseautage</h3>
+		  <p data-i18n="ppp.network.text">Certificat MJG Networking ou compte rendu d'entretien avec un professionnel.</p>
+		  <div class="cta-row">
+			<a class="btn" href="MJG_Networking.pdf" target="_blank" rel="noopener" data-i18n="ppp.network.btn">Voir le document</a>
+		  </div>
+		</div>
+
+		<!-- 8. Présentation de janvier -->
+		<div class="card highlight" style="margin: 20px 0;">
+		  <h3 data-i18n="ppp.jan.title">Présentation de janvier</h3>
+		  <p data-i18n="ppp.jan.text">Diapositives présentant les recherches menées dans le cadre du PPP.</p>
+		  <div class="cta-row">
+			<a class="btn" href="PPP_Presentation_Janvier.pdf" target="_blank" rel="noopener" data-i18n="ppp.jan.pdf">Présentation (PDF)</a>
+			<a class="btn" href="PPP_Presentation_Janvier.pptx" download data-i18n="ppp.jan.pptx">Présentation (PowerPoint)</a>
 		  </div>
 		</div>
 	  </div>
@@ -625,10 +701,10 @@
 		</p>
 
 		<div class="cta-row">
-		  <a id="cv-download-bottom" class="btn" href="CV_2026-17-10_Manon_Coulon.pdf" download 
+		  <a id="cv-download-bottom" class="btn" href="CV_2026-10-17_Manon_Coulon.pdf" download 
 			 data-i18n="cta.downloadShort" 
-			 data-url-fr="CV_2026-17-10_Manon_Coulon.pdf" 
-			 data-url-en="CV_2026-17-10_Manon_Coulon_Anglais.pdf">
+			 data-url-fr="CV_2026-10-17_Manon_Coulon.pdf" 
+			 data-url-en="CV_2026-10-17_Manon_Coulon_Anglais.pdf">
 			 Télécharger le CV
 		  </a>
 		</div>
